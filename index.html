@@ -14,9 +14,9 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="main-logo-box">
+                <a href="#!" class="main-logo-box">
                     <img  class="main-logo" src="assets/img/Frame.svg" alt="logo">
-                </div>
+                </a>
                 <div class="header-right-content-box">
                     <nav class="header-nav">
                         <ul class="header-nav-ul">
@@ -52,8 +52,8 @@
                     <div class="language-box">
                         <i class="fas fa-caret-down language-arrow"></i>
                         <div class="language-content-box">
-                            <a href="#">ქარ</a> 
-                            <a href="#">ინგ</a>
+                            <a class="language-content-box-active"  href="#">ქარ</a> 
+                            <a href="#">ინგ</a >
                             <a href="#">რუ</a>
                         </div>
                     </div>
@@ -225,6 +225,8 @@
              <div class="poular-product">
                  <h1 class="poular-product-h1">პოპულარული პროდუქცია</h1>
                  <div class="poular-product-swiper-box">
+                <!-- Add Pagination -->
+                <div class="swiper-pagination popular--swiper-pagenation"></div>
                       <!-- Swiper -->
                      <div class="swiper-container popular-swiper-top">
                          <div class="swiper-wrapper">
@@ -313,7 +315,7 @@
                     </div>
                          <div class="swiper-container popular-swiper-thumbs">
                              <div class="swiper-wrapper">
-                                 <div class="swiper-slide popular-swiper-small-img-box" ><img src="assets/img/image15.png" alt=""></div>
+                                 <div class="swiper-slide popular-swiper-small-img-box popular-swiper-small-img-box-active" ><img src="assets/img/image15.png" alt=""></div>
                                  <div class="swiper-slide popular-swiper-small-img-box" ><img src="assets/img/image15.png" alt=""></div>
                                  <div class="swiper-slide popular-swiper-small-img-box" ><img src="assets/img/image15.png" alt=""></div>
                                  <div class="swiper-slide popular-swiper-small-img-box" ><img src="assets/img/image15.png" alt=""></div>
@@ -324,6 +326,106 @@
          </div>
      </div>
      <!-- end popular product  -->
+
+     <!-- start about As  -->
+     <div class="about-as-outside-container">
+         <div class="container">
+             <div class="about-as">
+                 <h1 class="about-as-title" >ჩვენ შესახებ</h1>
+                 <div class="about-as-content-box">
+                        <div class="about-as-description-box">
+                            <div class="about-as-description-content">
+                                <h1 class="about-as-description-title">ჩვენ შესახებ</h1>
+                                <p  class="about-as-description-text">
+                                    მეც­ნი­ე­რებ­მა ახ­ლა­ხანს აღ­მო­ა­ჩი­ნეს, 
+                                    რომ ალუბ­ლის წვე­ნი ხან­გრძლი­ვი ცხოვ­რე­ბის გა­რან­ტია. 
+                                    მას­ში ყვე­ლა­ზე დიდი რა­ო­დე­ნო­ბი­თაა და­ა­ვა­დე­ბებ­თან 
+                                    მებ­რძო­ლი ნივ­თი­ე­რე­ბე­ბი.მეც­ნი­ე­რებ­მა ახ­ლა­ხანს აღ­მო­ა­ჩი­ნეს, 
+                                    რომ ალუბ­ლის წვე­ნი ხან­გრძლი­ვი ცხოვ­რე­ბის გა­რან­ტია. 
+                                    მას­ში ყვე­ლა­ზე დიდი რა­ო­დე­ნო­ბი­თაა და­ა­ვა­დე­ბებ­თან 
+                                    მებ­რძო­ლი ნივ­თი­ე­რე­ბე­ბი.
+                                </p>
+                            </div>
+                        </div>
+                     <div class="about-as-video-box">
+                        <video class="video">
+                            <source src="assets/video/daft_punk.mp4" type="video/mp4">
+                            <!-- <source src="assets/video/daft_punk.mp4" type="video/ogg"> -->
+                          </video>
+                          <div class="playpause"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- end about As  -->
+
+     <!-- start logo box  -->
+     <div class="logo-box">
+         <div class="container">
+             <div class="logo-box-content">
+                 <div class="logos">
+                    <img src="assets/img/microsoft-teams.png" alt="">
+                    <img src="assets/img/shadow-factory-2.png" alt="">
+                    <img src="assets/img/axure-2.png" alt="">
+                    <img src="assets/img/bbc-8896.png" alt="">
+                    <img src="assets/img/betonmix-28358.png" alt="">
+                    <img src="assets/img/castel.png" alt="">
+                    <img src="assets/img/charles-sturt-university.png" alt="">
+                    <img src="assets/img/microsoft-sql-server.png" alt="">
+                 </div>
+             </div>
+         </div>
+     </div>
+      <!-- end logo box  -->
+
+      <!-- start footer  -->
+      <footer>
+          <div class="container">
+              <div class="footer-content">
+                  <div class="footer-social">
+                      <a href="#!" class="fb-box">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                      <a href="#!" class="insta-box">
+                            <i class="fab fa-instagram"></i>
+                      </a>
+                  </div>
+                  <div class="footer-contact-box">
+                        <a href="#!" class="address-box">
+                            <div>
+                                <!-- <i class="fas fa-map-marker-alt"></i> -->
+                                <img src="assets/img/maps-and-flags1.svg" alt="">
+                            </div>
+                            <div>
+                                <p class="address-type" >მისამართი </p>
+                                <p>თბილისი, ზედაზენის ქ. 4ა</p>
+                            </div>
+                        </a>
+                        <a href="tel:+995-596-60-00-11" class="phone-box">
+                            <div>
+                                <!-- <i class="fas fa-phone-alt"></i> -->
+                                <img src="assets/img/phone-21.svg" alt="">
+                            </div>
+                            <div>
+                                <p class="address-type">ტელეფონი</p>
+                                <p>(+995) 596 60 00 11</p>
+                            </div>
+                        </a>
+                        <a href="mailto:info@smartacademy.ge" class="mail-box">
+                            <div>
+                                <p class="address-type">ელ. ფოსტა</p> 
+                                <p>info@smartacademy.ge</p>
+                            </div>
+                        </a>
+                  </div>
+                  <div class="smart-web-box">
+                      <p>Created By <span>SmartWeb</span></p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      <!-- end footer  -->
 
 
     <script src="assets/js/swiper.min.js"></script>
