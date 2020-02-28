@@ -1,6 +1,6 @@
 var galleryThumbs = new Swiper('.popular-swiper-thumbs', {
-    spaceBetween: 10,
-    slidesPerView: 5,
+    spaceBetween: 25,
+    slidesPerView: 6,
     freeMode: true,
     watchSlidesVisibility: true,
     
