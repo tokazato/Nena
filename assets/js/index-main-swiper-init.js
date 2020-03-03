@@ -12,8 +12,8 @@ var galleryThumbs = new Swiper('.main-swiper-bottom-box', {
     loop:true,
     loopedSlides: 5, //looped slides should be the same
     navigation: {
-      nextEl: '.main-swiper-arrow-next',
-      prevEl: '.main-swiper-arrow-prev',
+      nextEl: '.go-right',
+      prevEl: '.go-left',
     },
     thumbs: {
       swiper: galleryThumbs,

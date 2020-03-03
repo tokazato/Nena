@@ -17,7 +17,8 @@
             <div class="header-content">
                 <div class="burger-main-box">
                     <div class="burger">
-                        <img src="assets/img/Group40.png" alt="">
+                        <img class="open-burger" src="assets/img/Group40.png" alt="">
+                        <i class="fas fa-times close-burger"></i>
                     </div>
                 </div>
                 <a href="#!" class="main-logo-box">
@@ -48,9 +49,9 @@
                     </nav>
                     <div class="language-box">
                         <div class="language-content-box">
-                            <a class="language-content-box-active"  href="#">EN</a> 
-                            <a href="#">GE</a>
-                            <a href="#">RU</a>
+                            <a class="language-content-box-active"  href="#!">EN</a> 
+                            <a href="#!">GE</a>
+                            <a href="#!">RU</a>
                         </div>
                     </div>
                 </div>
@@ -58,11 +59,36 @@
         </div>
     </header>
      <!-- start header  -->
+
+     <!-- Start Pagenation -->
+
+     <div class="pagenation-box">
+        <a href="#1" class="active-page">
+            <span class="pagenation-line"></span>
+            <span class="pagenation-number">01</span>
+        </a>
+        <a href="#2">
+            <span class="pagenation-line"></span>
+            <span class="pagenation-number">02</span>
+        </a>
+        <a href="#3">
+            <span class="pagenation-line"></span>
+            <span class="pagenation-number">03</span>
+        </a>
+        <a href="#4">
+            <span class="pagenation-line"></span>
+            <span class="pagenation-number">04</span>
+        </a>
+     </div>
+
+     <!-- Start Pagenation -->
     
     <!-- start main swiper slider  -->
-    <div class="main">
+    <div id="1" class="main">
         <!-- <div class="container"> -->
             <div class="swiper-box">
+                <img class="go-left-mobile go-left" src="assets/img/Group44.svg" alt="">
+                <img class="go-right-mobile go-right" src="assets/img/Group99.svg" alt="">
                 <!-- Swiper -->
                 <!-- start big img  -->
                 <div class="swiper-container main-swiper-top-box">
@@ -70,6 +96,11 @@
                         <div class="swiper-slide main-swiper-slide">
                             <div class="main-swiper-description-box">
                                 <h1 class="slider-title">Cherry</h1>
+                                <div class="slider-main-img-big-box slider-main-img-big-box-mobile">
+                                    <div class="slider-main-img-box">
+                                        <img src="assets/img/MaskGroup5.png" alt="">
+                                    </div>
+                                </div>
                                 <div class="slider-text-box">
                                     <span class="line-text"></span>
                                     <p class="main-swiper-description-text">
@@ -95,12 +126,12 @@
                                         <p>Nectar</p>
                                     </div>
                                     <div class="main-swiper-select-content-box">
-                                        <img src="assets/img/alubali_kamfotii.png" alt="">
+                                        <img class="big-bottle" src="assets/img/alubali_kamfotii.png" alt="">
                                         <p>Compote</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-main-img-big-box">
+                            <div class="slider-main-img-big-box slider-main-img-big-box-desctop">
                                 <div class="slider-main-img-box">
                                     <img src="assets/img/MaskGroup5.png" alt="">
                                 </div>
@@ -150,7 +181,7 @@
                 </div>
                 <!-- end big img  -->
                 <!-- start small img  -->
-                <div class="container">
+                <div class="container main-slider-thumbs">
                     <div class="swiper-container main-swiper-bottom-box">
                         <div class="swiper-wrapper main-swiper-bottom-img-box">
                             <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
@@ -174,121 +205,149 @@
                         <div class="swiper-button-prev swiper-button-red main-swiper-arrow-prev"></div> -->
                         <div class="arrow-box">
                             <div class="main-swiper-arrow-prev-box">
-                                <i class="fas fa-angle-left main-swiper-arrow-prev"></i>
+                                <i class="fas fa-angle-left main-swiper-arrow-prev go-left"></i>
                             </div>
                             <div class="main-swiper-arrow-next-box">
-                                <i class="fas fa-angle-right main-swiper-arrow-next"></i>
+                                <i class="fas fa-angle-right main-swiper-arrow-next go-right"></i>
                             </div>
                         </div>
                     </div>
                 </div>
                  <!-- end small img  -->
+                 <div class="description-box-mobile">
+                     <button class="description-btn">Description 
+                         <i class="fas fa-plus descrip-plus"></i> 
+                        </button>
+                     <div class="description--text-box-mobile">
+                         <div class="description-text-mobile">
+                            <div class="description-text-line-mobile"></div>
+                            Fusce at nisi eget dolor rhoncus facilisis. 
+                            Mauris ante nisl, consectetur et luctus et,
+                            porta ut dolor. Curabitur ultricies ultrices n
+                            ulla. Morbi blandit nec est vitae dictum. 
+                            Etiam vel consectetur diam. Maecenas 
+                            vitae egestas dolor. Fusce tempor magna 
+                            at tortor aliquet finibus. Sed eu nunc sit 
+                            amet elit euismod faucibus. Class aptent 
+                            taciti sociosqu ad litora torquent per 
+                            conubia nostra, per inceptos himenaeos. 
+                            Duis gravida eget neque vel vulputate.
+                         </div>
+                     </div>
+                 </div>
             </div>
         <!-- </div> -->
     </div>
+    <div class="mobile-pagenation">
+        <span class="current-page">1</span> <span class="whole-page">/4</span>
+    </div>
+    <div class="descript-back"></div>
      <!-- end main swiper slider  -->
 
      <!-- start popular product  -->
-     <div class="popular-big-box">
-         <div class="container">
+     <div id="2" class="popular-big-box">
+         <div class="container popular-box">
              <div class="poular-product">
                  <h1 class="poular-product-h1">Popular Product</h1>
-                 <div class="poular-product-swiper-box">
-                      <!-- Swiper -->
-                     <div class="swiper-container popular-swiper-top">
-                         <div class="swiper-wrapper">
-                             <div class="swiper-slide popular-swiper-slide">
-                                 <div class="popular-swiper-big-img-box">
-                                     <img src="assets/img/2.png" alt="">
-                                 </div>
-                                 <div class="popular-swiper-description-box">
-                                     <h1 class="popular-swiper-description-h1">Tomato Sauces</h1>
-                                     <p class="popular-swiper-description-text">
-                                         Scientists have just discovered that 
-                                         cherry juice guarantees a long life. 
-                                         It contains the largest amount of 
-                                         disease-fighting substances.
-                                     </p>
-                                     <div class="popular-swiper-weight-box">
-                                         <p class="popular-swiper-weight">560g</p>
-                                         <p class="popular-swiper-weight">1560g</p>
-                                         <p class="popular-swiper-weight">850g</p>
+                 <div class="popular-slider-big-box">
+                     <div class="poular-product-swiper-box">
+                          <!-- Swiper -->
+                         <div class="swiper-container popular-swiper-top">
+                             <div class="swiper-wrapper">
+                                 <div class="swiper-slide popular-swiper-slide">
+                                     <div class="popular-swiper-big-img-box">
+                                         <img src="assets/img/2.png" alt="">
+                                     </div>
+                                     <div class="popular-swiper-description-box">
+                                         <h1 class="popular-swiper-description-h1">Tomato Sauces</h1>
+                                         <p class="popular-swiper-description-text">
+                                             Scientists have just discovered that 
+                                             cherry juice guarantees a long life. 
+                                             It contains the largest amount of 
+                                             disease-fighting substances.
+                                         </p>
+                                         <div class="popular-swiper-weight-box">
+                                             <p class="popular-swiper-weight">560g</p>
+                                             <p class="popular-swiper-weight">1560g</p>
+                                             <p class="popular-swiper-weight">850g</p>
+                                         </div>
                                      </div>
                                  </div>
-                             </div>
-                             <div class="swiper-slide popular-swiper-slide">
-                                <div class="popular-swiper-big-img-box">
-                                    <img src="assets/img/2.png" alt="">
-                                </div>
-                                <div class="popular-swiper-description-box">
-                                    <h1 class="popular-swiper-description-h1">Tomato Sauces</h1>
-                                    <p class="popular-swiper-description-text">
-                                        Scientists have just discovered that 
-                                        cherry juice guarantees a long life. 
-                                        It contains the largest amount of 
-                                        disease-fighting substances.
-                                    </p>
-                                    <div class="popular-swiper-weight-box">
-                                        <p class="popular-swiper-weight">560g</p>
-                                        <p class="popular-swiper-weight">1560g</p>
-                                        <p class="popular-swiper-weight">850g</p>
+                                 <div class="swiper-slide popular-swiper-slide">
+                                    <div class="popular-swiper-big-img-box">
+                                        <img src="assets/img/2.png" alt="">
+                                    </div>
+                                    <div class="popular-swiper-description-box">
+                                        <h1 class="popular-swiper-description-h1">Tomato Sauces</h1>
+                                        <p class="popular-swiper-description-text">
+                                            Scientists have just discovered that 
+                                            cherry juice guarantees a long life. 
+                                            It contains the largest amount of 
+                                            disease-fighting substances.
+                                        </p>
+                                        <div class="popular-swiper-weight-box">
+                                            <p class="popular-swiper-weight">560g</p>
+                                            <p class="popular-swiper-weight">1560g</p>
+                                            <p class="popular-swiper-weight">850g</p>
+                                        </div>
                                     </div>
                                 </div>
+                             </div>
+                         </div>
+                        </div>
+                        <div class="swiper-container popular-swiper-thumbs">
+                            <div class="swiper-wrapper popular-swiper-wraper">
+                                <div class="swiper-slide popular-swiper-small-img-box popular-swiper-small-img-box-active" >
+                                <span class="pupular-slider-line popular-swiper-small-img-box-active"></span>
+                                <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
+                                </div>
+                                <div class="swiper-slide popular-swiper-small-img-box" >
+                                    <span class="pupular-slider-line"></span>
+                                    <img src="assets/img/2.png" alt="">
                             </div>
-                         </div>
-                     </div>
-                    </div>
-                         <div class="swiper-container popular-swiper-thumbs">
-                             <div class="swiper-wrapper popular-swiper-wraper">
-                                 <div class="swiper-slide popular-swiper-small-img-box popular-swiper-small-img-box-active" >
-                                    <span class="pupular-slider-line popular-swiper-small-img-box-active"></span>
-                                    <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                    </div>
-                                 <div class="swiper-slide popular-swiper-small-img-box" >
-                                      <span class="pupular-slider-line"></span>
-                                     <img src="assets/img/2.png" alt="">
-                                </div>
-                             </div>
-                         </div>
+                            </div>
+                        </div>
+
+                 </div>
              </div>
          </div>
      </div>
      <!-- end popular product  -->
 
      <!-- start about As  -->
-     <div class="about-as-outside-container">
+     <div id="3" class="about-as-outside-container">
          <div class="container">
              <div class="about-as">
                  <div class="about-as-content-box">
@@ -317,13 +376,12 @@
                      <div class="about-as-video-box">
                         <video class="video">
                             <source src="assets/video/daft_punk.mp4" type="video/mp4">
-                            <!-- <source src="assets/video/daft_punk.mp4" type="video/ogg"> -->
                           </video>
                           <div class="playpause"></div>
                      </div>
                  </div>
                  <div class="about-as-slider">
-                      <!-- Swiper -->
+                     
                     <div class="swiper-container logo-slider-box">
                         <div class="swiper-wrapper swiper-wrapeper-box">
                             <div class="swiper-slide logo-box">
@@ -368,7 +426,7 @@
      <!-- end about As  -->
 
       <!-- start footer  -->
-      <footer>
+      <footer id="4">
           <div class="container">
               <div class="footer-content">
                   <div class="footer-social">
