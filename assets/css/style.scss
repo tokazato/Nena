@@ -24,6 +24,11 @@
 html {
     scroll-behavior: smooth;
   }
+  @include max-height(450px) {
+    body {
+        // display: none;
+    }
+}
 
 // index.html ----------- start header
 .scroll-none {
@@ -451,6 +456,7 @@ header {
 }
 .thumb-img {
     height: 100%;
+    cursor: pointer;
 }
 .main-swiper-arrow-prev-box {
     position: absolute;
@@ -579,11 +585,12 @@ header {
     color: #418B3D;
 }
 .mobile-pagenation {
-    position: fixed;
-    top: calc(100vh - 35px);
-    right: 5%;
-    z-index: 3;
+    // position: fixed;
+    // top: calc(100vh - 35px);
+    // right: 5%;
+    // z-index: 3;
     display: none;
+    text-align: center;
     @include max-width(720px) {
         display: block;
     }
@@ -616,7 +623,7 @@ header {
         flex-direction: column;
         justify-content: space-evenly;
     }
-    @include max-height(790px) {
+    @include max-height(700px) {
         padding-top: 105px;
     }
     @include max-width(680px) {
@@ -852,6 +859,10 @@ header {
     margin: 5px;
     background-color: #fff;
 }
+.right-pagenation {
+    text-align: right;
+    margin: 0 24px;
+}
 // index.html ----------- start populart product
 
 // index.html ----------- start about as
@@ -859,7 +870,20 @@ header {
     position: relative;
     height: 100vh;
     background: #FCF5F7;
-    padding-top: 97px;
+}
+.about-as-container {
+    height: 100%;
+}
+.about-as {
+    height: calc(100% - 100px);
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @include max-height(680px) {
+        justify-content: flex-start;
+    }
 }
 .about-as-title {
     text-align: center;
@@ -873,20 +897,42 @@ header {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
+    @include max-width(830px) {
+        flex-direction: column-reverse;
+        margin: 0 100px;
+        padding-top: 50px;
+    }
+    @include max-width(720px) {
+        margin: 0 24px;
+    }
 }
-.about-as-description-box {
+.about-as-description-big-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 444px;
+    // width: 444px;
+    width: 37%;
+    @include max-width(830px) {
+        width: 100%;
+        margin: 24px 0;
+    }
 }
 .about-as-description-content {
-    width: 536px;
+    // width: 536px;
 }
 .about-as-description-title {
     color: #171717;
     margin-bottom: 40px;
     font: Bold 38px/45px Gotham Pro;
+    @include max-width(830px) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @include max-width(550px) {
+        font-size: 20px;
+    }
 }
 .about-as-description-box {
     display: flex;
@@ -896,6 +942,14 @@ header {
     font-size: 18px;
     color: #2C3D4F;
     margin-right: 32px;
+    @include max-width(830px) {
+        height: 100px;
+        overflow-y: scroll;
+        margin-right: initial;
+    }
+    @include max-width(550px) {
+        font-size: 12px;
+    }
     p {
         color: #171717;
     }
@@ -906,16 +960,30 @@ header {
 .about-as-line {
     width: 10px;
     height: 151px;
+    height: 16vmin;
     background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
     display: flex;
     margin-right: 32px;
+    @include max-width(830px) {
+        display: none;
+    }
 }
 .about-as-video-box {
-    width: 504px;
-    height: 328px;
+    // width: 504px;
+    width: 42%;
+    // height: 328px;
+    height: 50vmin;
     display:table;
     position:relative;
     right: 50px;
+    @include max-width(830px) {
+        width: 100%;
+        right: initial;
+    }
+    @include max-width(830px) {
+        width: 100%;
+        right: initial;
+    }
 }
 .video {
     width: 100%;
@@ -937,21 +1005,38 @@ header {
     cursor: pointer;
 }
 .about-as-slider {
-    height: 216px;
-    position: absolute;
-    bottom: 0;
-    max-width: 1200px;
+    // height: 216px;
+    height: 30vmin;
+    width: 100%;
+    @include max-width(830px) {
+        height: 40px;
+    }
+    @include max-height(700px) {
+        height: 40px;
+    }
 }
 .logo-slider-box {
     height: 100%;
 }
 .swiper-wrapeper-box {
     height: 100% ;
+    display: flex;
+    align-items: center;
 }
 .logo-box {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 81px;
+    @include max-width(830px) {
+        height: 40px;
+    }
+    @include max-height(830px) {
+        height: 40px;
+    }
+    img {
+        height: 100%;
+    }
 }
 // index.html ----------- end about as
 
@@ -961,15 +1046,27 @@ footer {
     padding-top: 97px;
     background: #EFF6FF;
 }
+.footer-container {
+    height: 100%;
+}
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    justify-content: space-evenly;
+    height: 100%;
+    @include max-width(452px) {
+        justify-content: space-around;
+    }
 }
 .fb-box {
     width: 64px;
     height: 64px;
+    @include max-width(452px) {
+        width: 41px;
+        height: 41px;
+        font-size: 13px;
+    }
     border-radius: 50%;
     background: #fff;
     display: inline-flex;
@@ -981,6 +1078,11 @@ footer {
 .insta-box {
     width: 64px;
     height: 64px;
+    @include max-width(452px) {
+        width: 41px;
+        height: 41px;
+        font-size: 13px;
+    }
     border-radius: 50%;
     background: #fff;
     display: inline-flex;
@@ -989,10 +1091,26 @@ footer {
 }
 .footer-contact-box {
     display: flex;
-    margin-top: 105px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    a {
+        width: 215px;
+        @include max-width(452px) {
+            width: 150px;
+        }
+    }
+    img {
+        height: 41px;
+        width: 41px;
+        @include max-width(452px) {
+            height: 24px;
+            width: 24px;
+        }
+    }
 }
 .phone-box {
-    margin: 0 167px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1002,18 +1120,31 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+.mail-box {
+    @include max-width(692px) {
+        margin-top: 63px;
+    }
+}
 .address-type {
     margin: 21px 0;
     font: Bold 16px/19px Gotham Pro;
     color: #171717;
+    @include max-width(452px) {
+        font-size: 12px;
+    }
 }
 .address-type-text {
     color: #171717;
     font: Regular 14px/16px Gotham Pro;
+    @include max-width(452px) {
+        font-size: 10px;
+    }
 }
 .smart-web-box {
-    margin-top: 207px;
     color: #171717;
     font: Regular 14px/16px Gotham Pro;
+    @include max-width(452px) {
+        font-size: 12px;
+    }
 }
 // index.html ----------- end footer
