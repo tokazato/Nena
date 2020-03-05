@@ -28,7 +28,7 @@
                     <nav class="header-nav">
                         <ul class="header-nav-ul">
                             <li class="header-nav-li">
-                                <a class="nav-link" href="#!">HOME</a>
+                                <a class="nav-link nav-link-active" href="#!">HOME</a>
                             </li>
                             <li class="header-nav-li">
                                 <a class="nav-link" href="#!">ABOUT</a>
@@ -63,19 +63,19 @@
      <!-- Start Pagenation -->
 
      <div class="pagenation-box">
-        <a href="#1" class="active-page">
+        <a class="page-1 active-page">
             <span class="pagenation-line"></span>
             <span class="pagenation-number">01</span>
         </a>
-        <a href="#2">
+        <a class="page-2">
             <span class="pagenation-line"></span>
             <span class="pagenation-number">02</span>
         </a>
-        <a href="#3">
+        <a class="page-3">
             <span class="pagenation-line"></span>
             <span class="pagenation-number">03</span>
         </a>
-        <a href="#4">
+        <a class="page-4">
             <span class="pagenation-line"></span>
             <span class="pagenation-number">04</span>
         </a>
@@ -98,7 +98,7 @@
 
 
 
-        <div class="swiper-slide 1">   
+        <div id="page1" class="swiper-slide 1">   
 
             <!-- start main swiper slider  -->
     <div id="1" class="main">
@@ -115,7 +115,7 @@
                                 <h1 class="slider-title">Cherry</h1>
                                 <div class="slider-main-img-big-box slider-main-img-big-box-mobile">
                                     <div class="slider-main-img-box">
-                                        <img src="assets/img/MaskGroup5.png" alt="">
+                                        <img class="main-big-img" src="assets/img/MaskGroup5.png" alt="">
                                     </div>
                                 </div>
                                 <div class="slider-text-box">
@@ -135,28 +135,33 @@
                                 </div>
                                 <div class="main-swiper-select-product-box">
                                     <div class="main-swiper-select-content-box">
-                                        <img src="assets/img/alubali_murabaa.png" alt="">
+                                        <img class="jam-bottle go-to-big-img" src="assets/img/13.png" alt="">
                                         <p>Jam</p>
                                     </div>
                                     <div class="main-swiper-select-content-box">
-                                        <img src="assets/img/alubali_neqtari.png" alt="">
+                                        <img class="nectar-bottle go-to-big-img" src="assets/img/5.png" alt="">
                                         <p>Nectar</p>
                                     </div>
-                                    <div class="main-swiper-select-content-box">
-                                        <img class="big-bottle" src="assets/img/alubali_kamfotii.png" alt="">
+                                    <div class="main-swiper-select-content-box go-to-big-img-active">
+                                        <img class="compote-bottle go-to-big-img" src="assets/img/6.png" alt="">
                                         <p>Compote</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="slider-main-img-big-box slider-main-img-big-box-desctop">
                                 <div class="slider-main-img-box">
-                                    <img src="assets/img/MaskGroup5.png" alt="">
+                                    <img class="main-big-img" src="assets/img/6.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide main-swiper-slide">
                             <div class="main-swiper-description-box">
                                 <h1 class="slider-title">Cherry</h1>
+                                <div class="slider-main-img-big-box slider-main-img-big-box-mobile">
+                                    <div class="slider-main-img-box">
+                                        <img class="main-big-img" src="assets/img/MaskGroup5.png" alt="">
+                                    </div>
+                                </div>
                                 <div class="slider-text-box">
                                     <span class="line-text"></span>
                                     <p class="main-swiper-description-text">
@@ -174,22 +179,22 @@
                                 </div>
                                 <div class="main-swiper-select-product-box">
                                     <div class="main-swiper-select-content-box">
-                                        <img src="assets/img/alubali_murabaa.png" alt="">
+                                        <img class="jam-bottle go-to-big-img" src="assets/img/13.png" alt="">
                                         <p>Jam</p>
                                     </div>
                                     <div class="main-swiper-select-content-box">
-                                        <img src="assets/img/alubali_neqtari.png" alt="">
+                                        <img class="nectar-bottle go-to-big-img" src="assets/img/5.png" alt="">
                                         <p>Nectar</p>
                                     </div>
-                                    <div class="main-swiper-select-content-box">
-                                        <img src="assets/img/alubali_kamfotii.png" alt="">
+                                    <div class="main-swiper-select-content-box go-to-big-img-active">
+                                        <img class="compote-bottle go-to-big-img" src="assets/img/6.png" alt="">
                                         <p>Compote</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-main-img-big-box">
+                            <div class="slider-main-img-big-box slider-main-img-big-box-desctop">
                                 <div class="slider-main-img-box">
-                                    <img src="assets/img/MaskGroup5.png" alt="">
+                                    <img class="main-big-img" src="assets/img/6.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -201,21 +206,21 @@
                 <div class="container main-slider-thumbs">
                     <div class="swiper-container main-swiper-bottom-box">
                         <div class="swiper-wrapper main-swiper-bottom-img-box">
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/fresh-strawberry.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/ალუბალი.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/ripe-yellow-cherry.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/fresh-strawberry.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/ალუბალი.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/ripe-yellow-cherry.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/fresh-strawberry.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/ალუბალი.png" alt=""></div>
-                            <div class="swiper-slide"><img class="thumb-img" src="assets/img/ripe-yellow-cherry.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img thumb-img-active" src="assets/img/peach-e-liquid 1.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/fresh-strawberry.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/ალუბალი.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/ripe-yellow-cherry.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/fresh-strawberry.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/ალუბალი.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/ripe-yellow-cherry.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/fresh-strawberry.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/peach-e-liquid 1.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/ალუბალი.png" alt=""></div>
+                            <div class="swiper-slide main-swiper-thumbs-box"><img class="thumb-img" src="assets/img/ripe-yellow-cherry.png" alt=""></div>
                         </div>
                         <!-- Add Arrows -->
                         <!-- <div class="swiper-button-next swiper-button-red main-swiper-arrow-next"></div>
@@ -268,7 +273,7 @@
 
 
 
-        <div class="swiper-slide 2" >
+        <div id="page2" class="swiper-slide 2" >
            
              <!-- start popular product  -->
      <div id="2" class="popular-big-box">
@@ -389,7 +394,7 @@
 
 
 
-        <div class="swiper-slide 3">
+        <div id="page3" class="swiper-slide 3">
             
 
 
@@ -482,7 +487,7 @@
 
 
 
-        <div class="swiper-slide 4">
+        <div id="page4" class="swiper-slide 4">
             
 
 
@@ -533,6 +538,7 @@
 
 
        </div>
+
    </div>
 
  </div>

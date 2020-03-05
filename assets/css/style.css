@@ -17,7 +17,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.scroll-none {
+@-webkit-keyframes example {}
+
+@keyframes example {}.scroll-none {
   overflow: hidden;
 }
 
@@ -247,6 +249,10 @@ header {
   }
 }
 
+.nav-link-active::after {
+  height: 35px;
+}
+
 .language-box {
   position: relative;
   height: 43px;
@@ -324,6 +330,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .pagenation-box a:hover .pagenation-line {
@@ -584,14 +591,39 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0.4;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main-swiper-select-content-box:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .main-swiper-select-content-box p {
   margin-top: 8px;
 }
 
-.big-bottle {
+.go-to-big-img-active {
+  opacity: 1;
+}
+
+.go-to-big-img {
+  cursor: pointer;
+}
+
+.compote-bottle {
   height: 17vmin;
+}
+
+.nectar-bottle {
+  height: 72px;
+}
+
+.jam-bottle {
+  height: 57px;
 }
 
 .main-swiper-bottom-img-box {
@@ -662,6 +694,28 @@ header {
 .thumb-img {
   height: 100%;
   cursor: pointer;
+  opacity: 0.4;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.thumb-img:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.main-swiper-thumbs-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.thumb-img-active {
+  opacity: 1;
 }
 
 .main-swiper-arrow-prev-box {

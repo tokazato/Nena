@@ -18,4 +18,5 @@ var galleryThumbs = new Swiper('.main-swiper-bottom-box', {
     thumbs: {
       swiper: galleryThumbs,
     },
+    speed: 1500,
   });
