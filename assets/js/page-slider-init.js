@@ -45,13 +45,23 @@ mySwiper.on('slideChangeTransitionStart', function () {
     if( $('#page2').hasClass('swiper-slide-active') ) {
         $('.pagenation-box a').removeClass('active-page')
         $('.page-2').addClass('active-page')
+        $('  .popular-swiper-wraper, .popular-swiper-description-box').addClass('slide-up-class')  
     }
     if( $('#page3').hasClass('swiper-slide-active') ) {
         $('.pagenation-box a').removeClass('active-page')
         $('.page-3').addClass('active-page')
+        $('.about-as-slider').addClass('slide-up-class')
+        $('.about-as-description-box').addClass('slide-from-left')
+        // $('.video').addClass('slide-from-right') 
+        // $('.about-as-content-box').addClass('slide-up-class')
     }
     if( $('#page4').hasClass('swiper-slide-active') ) {
         $('.pagenation-box a').removeClass('active-page')
         $('.page-4').addClass('active-page')
+        $('.fb-box').addClass('slide-from-left')
+        $('.insta-box').addClass('slide-from-right') 
+        $('.smart-web-box').addClass('slide-up-class')
     }
   });
+
+

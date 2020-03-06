@@ -8,7 +8,82 @@
         @content;
     }
 }
-
+@keyframes text-line {
+    100% {
+      height: 100%;
+    } 
+}
+@keyframes slide-down {
+    100% {
+      top: 0;
+    } 
+}
+@keyframes fadeIn {
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes blur {
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+    }
+}
+@keyframes slide-up {
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+@keyframes slide-down {
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes slide-right {
+    100% {
+        right: calc(50% - 600px);
+    }
+}
+@keyframes slide-from-right {
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+@keyframes slide-from-left {
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+.slide-up-class {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    animation: slide-up 1.5s ease 0.8s forwards;
+}
+.slide-down-class {
+    position: relative;
+    top: -250px;
+    opacity: 0;
+    animation: slide-down 1s ease 0.7s forwards;
+}
+.slide-from-right {
+    position: relative;
+    right: -300px;
+    opacity: 0;
+    animation: slide-from-right 1s ease 0.7s forwards;
+}
+.slide-from-left {
+    position: relative;
+    left: -300px;
+    opacity: 0;
+    animation: slide-from-left 1s ease 0.7s forwards;
+}
 * {
     margin: 0;
     padding: 0;
@@ -41,9 +116,10 @@ html {
 header {
     border-top: 3px solid #181818;
     position: fixed;
-    top: 0;
+    top: -100px;
     width: 100%;
     z-index: 10;
+    animation: slide-down 0.7s 0.7s ease forwards;
 }
 .header-content {
     display: flex;
@@ -55,10 +131,18 @@ header {
         margin: 0 24px;
     }
 }
-.main-logo {
+.main-logo-box {
     height: 70px;
     width: 57px;
     object-fit: contain;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    @include max-width(630px) {
+        height: 45px;
+        width: 56px;
+    }
 }
 .burger-main-box {
     display: none;
@@ -185,7 +269,8 @@ header {
 }
 .nav-link-active {
     &::after {
-        height: 35px;
+        height: 0px;
+        animation: line-infinite 1s ease 1s forwards;
     }
 }
 .language-box {
@@ -193,6 +278,10 @@ header {
     height: 43px;
     width: 47px;
     background: #418B3D;
+    @include max-width(800px) {
+        height: 32px;
+        width: 32px;
+    }
     &:hover {
         .language-content-box  {
             height: 130px;
@@ -208,12 +297,18 @@ header {
     width: 100%;
     overflow: hidden;
     transition: 0.3s ease;
+    @include max-width(800px) {
+        height: 32px;
+    }
     a {
         padding: 13px;
-        font-size: 13px;
         color: #2C3D4F;
         border: 1px solid #418B3D;
         font: Bold 13px/15px Gotham Pro;
+        @include max-width(800px) {
+            padding: 7px;
+            font-size: 10px;
+        }
     }
 }
 .language-content-box a:nth-child(1) {
@@ -230,13 +325,14 @@ header {
 // index.html ----------- start pagenation
 .pagenation-box {
     position: fixed;
-    right: calc(50% - 600px);
+    right: calc(33% - 600px);
     top: 50%;
     transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     z-index: 3;
+    animation: slide-right 1s ease 1s forwards;
     a {
         display: flex;
         align-items: center;
@@ -318,10 +414,15 @@ header {
     }
 }
 .main-slider-thumbs {
+    position: relative;
+    bottom: -135px;
+    opacity: 0;
+    animation: slide-up 0.7s 0.7s ease forwards;
     @include max-width(720px) {
         display: none;
     }
 }
+
 .main-swiper-bottom-box {
     width: 100%;
     padding-left: 100px;
@@ -333,8 +434,6 @@ header {
     width: 100vw;
     position: relative;
     left: -75px;
-    // padding-left: 158px;
-    // padding-left: 10%;
     @include max-width(1000px) {
         left: 0px;
     }
@@ -377,6 +476,9 @@ header {
     font-size: 10vmin; 
     color: #171717;
     font: Bold  Gotham Pro;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: fadeIn 1.5s ease 0s  forwards;
     @include max-width(1140px) {
         font-size: 8vmin; 
     }
@@ -390,27 +492,37 @@ header {
         // width: 198px;
         width: 26vmin;
         margin-bottom: 37px;
+        
+        opacity: 0;
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        animation: blur 1s ease 1s forwards;
         img {
-            height: 100%;
             width: 100%;
+            height: 100%;
         }
     }
 }
-.slider-main-img-big-box-mobile {
-    display: none;
-    @include max-width(720px) {
-        display: flex;
-    }
-}
+// .slider-main-img-big-box-mobile {
+//     display: none;
+//     @include max-width(720px) {
+//         display: flex;
+//     }
+// }
 .slider-main-img-big-box-desctop {
     @include max-width(720px) {
-        display: none !important;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
     }
 }
 .main-swiper-select-product-box {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    opacity: 0;
+    transform: scale(1);
+    animation: fadeIn 1.5s ease 1s  forwards;
 }
 .main-swiper-select-content-box {
     width: 86px;
@@ -457,7 +569,9 @@ header {
     height: auto;
     font-size: 2.2vh;
     overflow: hidden;
-    // margin-bottom: 48px;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: fadeIn 1.5s ease 0s  forwards;
     @include max-width(1140px) {
         width: 500px;
     }
@@ -470,10 +584,11 @@ header {
 }
 .line-text {
     margin-right: 32px;
-    height: auto;
     width: 5px;
     background: transparent linear-gradient(30deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
     display: flex;
+    animation: text-line 1s 1s  ease forwards;
+    height: 0;
 }
 .arrow-box {
     display: flex;
@@ -677,6 +792,7 @@ header {
     text-align: center;
     font-size: 36px;
     color: #383C5D;
+
     @include max-width(800px) {
         margin-bottom: 6%;
     }
@@ -1187,3 +1303,6 @@ footer {
     }
 }
 // index.html ----------- end footer
+
+
+

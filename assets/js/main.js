@@ -38,7 +38,7 @@ $(document).ready(function() {
         $(this).addClass('go-to-big-img-active')
     })
 
-    $('.go-right').click(function(){
+    $('.go-right, .go-left').click(function(){
 
         $('.slider-text-box, .slider-title').css({
             opacity: 0,

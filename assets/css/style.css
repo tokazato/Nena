@@ -1,3 +1,152 @@
+@-webkit-keyframes text-line {
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes text-line {
+  100% {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes slide-down {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slide-down {
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blur {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+}
+
+@keyframes blur {
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+}
+
+@-webkit-keyframes slide-up {
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  100% {
+    right: calc(50% - 600px);
+  }
+}
+
+@keyframes slide-right {
+  100% {
+    right: calc(50% - 600px);
+  }
+}
+
+@-webkit-keyframes slide-from-right {
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-from-left {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.slide-up-class {
+  position: relative;
+  bottom: -50px;
+  opacity: 0;
+  -webkit-animation: slide-up 1.5s ease 0.8s forwards;
+          animation: slide-up 1.5s ease 0.8s forwards;
+}
+
+.slide-down-class {
+  position: relative;
+  top: -250px;
+  opacity: 0;
+  -webkit-animation: slide-down 1s ease 0.7s forwards;
+          animation: slide-down 1s ease 0.7s forwards;
+}
+
+.slide-from-right {
+  position: relative;
+  right: -300px;
+  opacity: 0;
+  -webkit-animation: slide-from-right 1s ease 0.7s forwards;
+          animation: slide-from-right 1s ease 0.7s forwards;
+}
+
+.slide-from-left {
+  position: relative;
+  left: -300px;
+  opacity: 0;
+  -webkit-animation: slide-from-left 1s ease 0.7s forwards;
+          animation: slide-from-left 1s ease 0.7s forwards;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +175,11 @@ html {
 header {
   border-top: 3px solid #181818;
   position: fixed;
-  top: 0;
+  top: -100px;
   width: 100%;
   z-index: 10;
+  -webkit-animation: slide-down 0.7s 0.7s ease forwards;
+          animation: slide-down 0.7s 0.7s ease forwards;
 }
 
 .header-content {
@@ -50,11 +201,23 @@ header {
   }
 }
 
-.main-logo {
+.main-logo-box {
   height: 70px;
   width: 57px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.main-logo-box img {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 630px) {
+  .main-logo-box {
+    height: 45px;
+    width: 56px;
+  }
 }
 
 .burger-main-box {
@@ -250,7 +413,9 @@ header {
 }
 
 .nav-link-active::after {
-  height: 35px;
+  height: 0px;
+  -webkit-animation: line-infinite 1s ease 1s forwards;
+          animation: line-infinite 1s ease 1s forwards;
 }
 
 .language-box {
@@ -258,6 +423,13 @@ header {
   height: 43px;
   width: 47px;
   background: #418B3D;
+}
+
+@media only screen and (max-width: 800px) {
+  .language-box {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .language-box:hover .language-content-box {
@@ -282,12 +454,24 @@ header {
   transition: 0.3s ease;
 }
 
+@media only screen and (max-width: 800px) {
+  .language-content-box {
+    height: 32px;
+  }
+}
+
 .language-content-box a {
   padding: 13px;
-  font-size: 13px;
   color: #2C3D4F;
   border: 1px solid #418B3D;
   font: Bold 13px/15px Gotham Pro;
+}
+
+@media only screen and (max-width: 800px) {
+  .language-content-box a {
+    padding: 7px;
+    font-size: 10px;
+  }
 }
 
 .language-content-box a:nth-child(1) {
@@ -306,7 +490,7 @@ header {
 
 .pagenation-box {
   position: fixed;
-  right: calc(50% - 600px);
+  right: calc(33% - 600px);
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -321,6 +505,8 @@ header {
       -ms-flex-align: end;
           align-items: flex-end;
   z-index: 3;
+  -webkit-animation: slide-right 1s ease 1s forwards;
+          animation: slide-right 1s ease 1s forwards;
 }
 
 .pagenation-box a {
@@ -424,6 +610,14 @@ header {
   }
 }
 
+.main-slider-thumbs {
+  position: relative;
+  bottom: -135px;
+  opacity: 0;
+  -webkit-animation: slide-up 0.7s 0.7s ease forwards;
+          animation: slide-up 0.7s 0.7s ease forwards;
+}
+
 @media only screen and (max-width: 720px) {
   .main-slider-thumbs {
     display: none;
@@ -521,6 +715,11 @@ header {
   font-size: 10vmin;
   color: #171717;
   font: Bold  Gotham Pro;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-animation: fadeIn 1.5s ease 0s  forwards;
+          animation: fadeIn 1.5s ease 0s  forwards;
 }
 
 @media only screen and (max-width: 1140px) {
@@ -542,28 +741,24 @@ header {
   height: 45vmin;
   width: 26vmin;
   margin-bottom: 37px;
+  opacity: 0;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -webkit-animation: blur 1s ease 1s forwards;
+          animation: blur 1s ease 1s forwards;
 }
 
 .slider-main-img-big-box .slider-main-img-box img {
-  height: 100%;
   width: 100%;
-}
-
-.slider-main-img-big-box-mobile {
-  display: none;
-}
-
-@media only screen and (max-width: 720px) {
-  .slider-main-img-big-box-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  height: 100%;
 }
 
 @media only screen and (max-width: 720px) {
   .slider-main-img-big-box-desctop {
-    display: none !important;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 
@@ -577,6 +772,11 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: fadeIn 1.5s ease 1s  forwards;
+          animation: fadeIn 1.5s ease 1s  forwards;
 }
 
 .main-swiper-select-content-box {
@@ -652,6 +852,11 @@ header {
   height: auto;
   font-size: 2.2vh;
   overflow: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-animation: fadeIn 1.5s ease 0s  forwards;
+          animation: fadeIn 1.5s ease 0s  forwards;
 }
 
 @media only screen and (max-width: 1140px) {
@@ -674,12 +879,14 @@ header {
 
 .line-text {
   margin-right: 32px;
-  height: auto;
   width: 5px;
   background: transparent linear-gradient(30deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: text-line 1s 1s  ease forwards;
+          animation: text-line 1s 1s  ease forwards;
+  height: 0;
 }
 
 .arrow-box {
