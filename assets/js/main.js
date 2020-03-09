@@ -38,33 +38,8 @@ $(document).ready(function() {
         $(this).addClass('go-to-big-img-active')
     })
 
-    $('.go-right, .go-left').click(function(){
 
-        $('.slider-text-box, .slider-title').css({
-            opacity: 0,
-            transition: '0s ease',
-        }); 
-
-        $('.main-big-img, .main-swiper-select-product-box').css({
-            opacity: 0,
-            transition: '0.67s ease', 
-        }) 
-
-        setTimeout(() => {
-            $('.slider-text-box, .slider-title').delay(200).css({
-                opacity: 1,
-                transition: '0.6s ease',
-            })
-        }, 1500);
-
-        setTimeout(() => {
-            $('.main-big-img, .main-swiper-select-product-box ').css({
-                opacity: 1,
-                // transition: '0.3s ease',
-            })
-        }, 600);
-        
-    })
     
+    // $(".description-text-mobile").text( $(".swiper-slide-active .main-swiper-description-text").text() )
     
 });
