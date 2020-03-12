@@ -20,8 +20,7 @@ $(document).ready(function() {
         $('.description--text-box-mobile').slideToggle()
         $('.description-btn').toggleClass('close-description-box')
         $('.descrip-plus').toggleClass('descrip-plus-hide')
-        $('.descript-back').toggleClass('active-descrip-back')
-        // $('.descript-back').slideToggle()
+        $('header').toggleClass('downIndex')
         $('body').toggleClass('scroll-none')
     })
 
@@ -38,8 +37,10 @@ $(document).ready(function() {
         $(this).addClass('go-to-big-img-active')
     })
 
+    $('.dropdown-li a').hover(function(){
+        $('.dropdown-li a').toggleClass('dropdown-effect')
+        $(this).toggleClass('dropdown-effect-active')
 
-    
-    // $(".description-text-mobile").text( $(".swiper-slide-active .main-swiper-description-text").text() )
+    })
     
 });

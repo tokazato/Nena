@@ -1,6 +1,10 @@
 var swiper = new Swiper('.logo-slider-box', {
     slidesPerView: 6,
     // spaceBetween: 20,
+    autoplay: {
+      delay: 2000,
+    },
+    speed: 1000,
     breakpoints: {
       320: {
         slidesPerView: 3,
