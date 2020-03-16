@@ -13,6 +13,34 @@
         @content;
     }
 }
+@font-face {
+    font-family: gothaProMedium;
+    src: url(../fonts/GothamProMediumItalic.ttf);
+}
+@font-face {
+    font-family: gothaProBla;
+    src: url(../fonts/GothaProBla.otf);
+}
+@font-face {
+    font-family: gothaProBol;
+    src: url(../fonts/GothaProBol.otf);
+}
+@font-face {
+    font-family: gothaProLig;
+    src: url(../fonts/GothaProLig.otf);
+}
+@font-face {
+    font-family: gothaProLigIta;
+    src: url(../fonts/GothaProLigIta.otf);
+}
+@font-face {
+    font-family: gothaProMed;
+    src: url(../fonts/GothaProMed.otf);
+}
+@font-face {
+    font-family: gothaProReg;
+    src: url(../fonts/GothaProReg.otf);
+}
 @keyframes text-line {
     100% {
       height: 100%;
@@ -112,22 +140,24 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-html {
-    scroll-behavior: smooth;
-  }
-  @include max-height(450px) {
-    body {
-        // display: none;
-    }
-}
-
-@keyframes example {
-    
-}
+// html {
+//     scroll-behavior: smooth;
+// }
+// @include max-height(450px) {
+//     body {
+//         display: none;
+//     }
+// }
 
 // index.html ----------- start header
 .scroll-none {
     overflow: hidden;
+}
+.page-slider-swiper-wraper {
+    height: 100vh;
+    @include max-width(500px) {
+        height: 90vh;
+    }
 }
 header {
     border-top: 3px solid #181818;
@@ -151,8 +181,8 @@ header {
     }
 }
 .main-logo-box {
-    height: 70px;
-    width: 57px;
+    height: 57px;
+    width: 70px;
     object-fit: contain;
     img {
         height: 100%;
@@ -252,10 +282,14 @@ header {
             margin-right: 0;
         }
     }
+    @include max-height(450px) {
+        margin: 0 10px 20px 0;
+    }
 }
 .nav-link {
     font-size: 12px;
-    font: Bold 12px/14px Gotham Pro;
+    font: Bold 12px/14px;
+    font-family: gothaProBol;
     color: #2C3D4F;
     position: relative;
     cursor: pointer;
@@ -301,7 +335,7 @@ header {
         .dropdown-ul {
             opacity: 1;
             visibility: visible;
-            transition: 0.9s ease;
+            transition: 0.6s ease;
         }
         .nav-link::after {
             height: 35px; 
@@ -309,8 +343,8 @@ header {
     }
 }
 .dropdown-ul {
+    padding: 5px 0;
     border: 2px solid #171717;
-    padding: 16px 36px 16px 16px;
     position: absolute;
     top: 35px;
     background-color: #fff;
@@ -318,9 +352,21 @@ header {
     visibility: hidden;
     transition: 0.6s ease;
     width: max-content;
+    z-index: 2;
+    @include max-width(800px) {
+        min-width: 180px;
+        left: -40%;
+    }
+    @include max-height(450px) {
+        top: 20px;
+    }
 }
 .dropdown-li {
-    margin-bottom: 18px;
+    padding: 6px 36px 6px 16px;
+    cursor: pointer;
+    @include max-width(800px) {
+        text-align: left;
+    }
     a {
         color: #171717;
         font: Bold 10px/12px Gotham Pro;
@@ -328,6 +374,9 @@ header {
         .nav-link::after {
             height: 35px; 
         }
+    }
+    @include max-height(450px) {
+        padding: 2px 36px 2px 16px;
     }
 }
 .dropdown-li:last-child {
@@ -458,6 +507,8 @@ header {
 }
 .ball-big-box {
     height: 0;
+    position: relative;
+    z-index: 0;
     @include max-width(900px) {
         display: none;
     }
@@ -566,7 +617,7 @@ header {
     margin-bottom: 7vh;
     height: 70%;
     @include max-width(720px) {
-        height: 80%;
+        // height: 80%;
     }
     @include max-height(500px) {
         margin-top: 0vh;
@@ -611,7 +662,7 @@ header {
         align-items: center;
     }
     @include max-height(500px) {
-        overflow-y: scroll;
+        // overflow-y: scroll;
     }
 }
 .go-left-mobile, .go-right-mobile {
@@ -634,14 +685,17 @@ header {
     cursor: pointer;
 }
 .slider-title {
+    font-family: gothaProBol;
     font-size: 10vmin; 
     color: #171717;
-    font: Bold  Gotham Pro;
     opacity: 0;
     transform: scale(0.7);
     animation: fadeIn 1.5s ease 0s  forwards;
     @include max-width(1140px) {
         font-size: 8vmin; 
+    }
+    @include max-height(450px) {
+        font-size: 4vmin; 
     }
 }
 .slider-main-img-big-box {
@@ -672,6 +726,10 @@ header {
             @include max-width(520px) {
                 display: flex;
             }
+        }
+        @include max-height(450px) {
+            height: 15vmin;
+            width: 8vmin;
         }
     }
 }
@@ -709,6 +767,11 @@ header {
     }
     p {
         margin-top: 8px;
+        font-family: gothaProMed;
+        font-size: 14px;
+        @include max-width(550px) {
+            font-size: 12px;
+        }
     }
 }
 .go-to-big-img-active {
@@ -719,12 +782,21 @@ header {
 }
 .compote-bottle {
     height: 17vmin;
+    @include max-height(450px) {
+        height: 10vmin;
+    }
 }
 .nectar-bottle {
     height: 72px;
+    @include max-height(450px) {
+        height: 30px; 
+    }
 }
 .jam-bottle {
     height: 57px;
+    @include max-height(450px) {
+        height: 25px; 
+    }
 }
 .main-swiper-bottom-img-box {
     display: flex;
@@ -737,6 +809,7 @@ header {
     }
 }
 .main-swiper-description-text {
+    font-family: gothaProReg;
     width: 638px;
     height: auto;
     font-size: 2.2vh;
@@ -744,6 +817,8 @@ header {
     opacity: 0;
     transform: scale(0.7);
     animation: fadeIn 1.5s ease 0s  forwards;
+    line-height: 28px;
+    color: rgba(23, 23, 23, 0.7);
     @include max-width(1140px) {
         width: 500px;
     }
@@ -851,20 +926,20 @@ header {
     width: 122px;
     height: 42px;   
     border: 2px solid #EAEAEA;
-    border-radius: 0px 10px 0px 0px;
+    border-radius: 10px;
     opacity: 1;
     background: #fff;
     position: absolute;
     z-index: 15;
     bottom: 0;
-    left: 0;
+    left: 24px;
     transition: 0.6s ease;
     cursor: pointer;
 }
 .close-description-box {
     left: 50%;
     transform: translate(-50%, 0);
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     transition: 0.6s ease;
 }
 .description--text-box-mobile {
@@ -893,15 +968,17 @@ header {
     margin-right: 16px;
     background: transparent linear-gradient(16deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
 }
-.description-text-mobile {
-    font: Regular 12px/20px Gotham Pro;
-    letter-spacing: 0;
-    color: rgba(23, 23, 23, 0.7);
-    padding: 20px 24px 80px 24px;
-    background: #fff;
+.description-text-mobile-change {
     display: flex;
     position: relative;
     z-index: 12;
+    background: #fff;
+    padding: 20px 24px 80px 24px;
+}
+.description-text-mobile {
+    font: 12px/20px gothaProReg;
+    letter-spacing: 0;
+    color: rgba(23, 23, 23, 0.7);
 }
 .descrip-plus {
     display: inline-flex;
@@ -917,17 +994,24 @@ header {
     // z-index: 3;
     display: none;
     text-align: center;
+    font-family: gothaProMed;
     @include max-width(720px) {
         display: block;
     }
 }
 .whole-page {
-    font: Regular 15px/17px Gotham Pro;
+    font-size: 15px;
     color: #17171766;
+    @include max-height(450px) {
+        font-size: 10px;
+    }
 }
 .current-page {
     color: #171717;
     font-size: 22px;
+    @include max-height(450px) {
+        font-size: 15px;
+    }
 }
 // index.html ----------- end main swiper slider
 
@@ -935,14 +1019,17 @@ header {
 .popular-big-box {
     position: relative;
     height: 100vh;
-    background: #FFFEEF 0% 0% no-repeat padding-box;
+    // background: rgb(255, 254, 239) 0% 0% no-repeat padding-box;
+    @include max-width(850px) {
+        height: 90vh;
+    }
 }
 .popular-box {
     height: 100%;
 }
 .poular-product {
     position: relative;
-    padding-top: 167px;
+    padding-top: 137px;
     height: 100%;
     @include max-width(1100px) {
         display: flex;
@@ -955,10 +1042,13 @@ header {
     @include max-width(680px) {
         padding-top: 105px;
     }
+    @include max-width(680px) {
+        justify-content: center;
+    }
 }
 .poular-product-h1 {
     font-size: 38px;
-    font: Bold;
+    font-family: gothaProBol; 
     letter-spacing: 0;
     color: #171717;
     text-align: center;
@@ -970,6 +1060,9 @@ header {
     }
     @include max-width(680px) {
         font-size: 20px;
+    }
+    @include max-height(450px) {
+        font-size: 4vmin;
     }
 }
 .popular-slider-big-box {
@@ -1011,6 +1104,7 @@ header {
     }
 }
 .popular-swiper-description-h1 {
+    font-family: gothaProBol;
     font-size: 24px;
     color: #418B3D;
     margin-bottom: 22px;
@@ -1022,19 +1116,51 @@ header {
         font-size: 15px;
         margin-bottom: 15px;
     }
+    @include max-height(450px) {
+        margin-top: 10;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
 }
 .popular-swiper-description-text {
     font-size: 16px;
     color: #171717;
     margin-bottom: 32px;
     width: 628px;
-    font-weight: bold;
-    @include max-width(1100px) {
+    font-family: gothaProReg;
+    line-height: 30px;
+    @include max-width(650px) {
         width: 272px;
     } 
     @include max-width(680px) {
         font-size: 12px;
         margin-bottom: 20px;
+        line-height: 20px;
+    }
+    @include max-height(450px) {
+        margin-bottom: 5px;
+        line-height: 15px;
+        font-size: 10px;
+    }
+}
+.about-as-ingredients {
+    font: 16px/30px gothaProMed;
+    color: rgba(23, 23, 23, 1);
+    @include max-width(680px) {
+        font: 12px/20px gothaProMed;
+    }
+    @include max-height(450px) {
+        font: 10px/15px gothaProMed;
+    }
+}
+.ingred-percent {
+    font: Bold 16px/30px gothaProBol;
+    color: rgba(187, 6, 17, 1);
+    @include max-width(680px) {
+        font: Bold 12px/20px gothaProBol;
+    }
+    @include max-height(450px) {
+        font: Bold 10px/15px gothaProBol;
     }
 }
 .popular-swiper-weight {
@@ -1045,13 +1171,19 @@ header {
     width: 72px;
     height: 46px;
     border: 1px solid #00000034;
-    border-radius: 23px;
+    border-radius: 15px 15px 0px 15px;
     margin-right: 5px;
-    font-weight: bold;
+    font-family: gothaProBol;
+    font-size: 15px;
     @include max-width(680px) {
         width: 53px;
         height: 33px;
         font-size: 11px;
+    }
+    @include max-height(450px) {
+        width: 40px;
+        height: 23px;
+        font-size: 9px;
     }
 }
 .popular-swiper-big-img-box {
@@ -1063,6 +1195,7 @@ header {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    margin-left: 24px;
     img {
         width: 100%;
         height: 100%;
@@ -1075,6 +1208,10 @@ header {
         width: 95px;
         height: 168px;
     }
+    @include max-height(450px) {
+        width: 11vmin;
+        height: 15vmin;
+    }
 }
 .popular-swiper-thumbs {
     width: 550px;
@@ -1082,19 +1219,16 @@ header {
     // height: 26vmin;
     position: absolute;
     right: 180px;
-    top: 50px;
+    top: 20px;
     @include max-width(1100px) {
         width: 370px;
-        height: 130px;
+        height: 150px;
         right: 20%;
     }
     @include max-width(800px) {
         width: 175px;
         height: 220px;
         top: 0px;
-    }
-    @include max-height(700px) {
-        // top: 50px;
     }
     @include max-width(720px) {
         width: 175px;
@@ -1103,6 +1237,9 @@ header {
     }
     @include max-width(350px) {
         right: 0;
+    }
+    @include max-height(450px) {
+        height: 75px;
     }
 }
 .popular-swiper-wraper {
@@ -1116,6 +1253,7 @@ header {
     // height: 10vmin;
     margin-right: 25px;
     margin-bottom: 24px;
+    box-shadow: 0px 12px 24px #00000014;
     @include max-width(1100px) {
         width: 60px !important;
         height: 60px;
@@ -1136,8 +1274,9 @@ header {
     background: #fff;
     cursor: pointer;
     &:hover .pupular-slider-line {
-        display: flex;
-        transition: 0.3s ease;
+        // display: flex;
+        transition: 0.9s ease;
+        height: 100%;
     }
     img {
         width: 32px;
@@ -1152,6 +1291,14 @@ header {
             width: 17px;
             height: 29px;
         }
+        @include max-height(450px) {
+            width: 13px;
+            height: 20px;        
+        }
+    }
+    @include max-height(450px) {
+        width: 28px !important;
+        height: 28px;
     }
 }
 .popular-swiper-description-box {
@@ -1163,18 +1310,21 @@ header {
     }
 }
 .pupular-slider-line {
-    height: 100%;
+    height: 0%;
     width: 3px;
     background: #418B3D;
     position: absolute;
+    top: 0;
     z-index: 1;
     left: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    display: none;
+    // display: none;
+    transition: 0.9s ease;
 }
-.popular-swiper-small-img-box-active {
-    display: flex;
+.pupular-slider-line-active {
+    height: 0%;
+    animation: text-line 2s ease 4s  forwards;
 }
 .popular--swiper-pagenation {
     transform: rotate(90deg);
@@ -1196,7 +1346,10 @@ header {
 .about-as-outside-container {
     position: relative;
     height: 100vh;
-    background: #FCF5F7;
+    // background: #FCF5F7;
+    @include max-width(720px) {
+        height: 90vh;
+    }
 }
 .about-as-container {
     height: 100%;
@@ -1243,6 +1396,9 @@ header {
         width: 100%;
         margin: 24px 0;
     }
+    @include max-height(450px) {
+        margin: 10px 0;
+    }
 }
 .about-as-description-content {
     // width: 536px;
@@ -1250,7 +1406,7 @@ header {
 .about-as-description-title {
     color: #171717;
     margin-bottom: 40px;
-    font: Bold 38px/45px Gotham Pro;
+    font: 38px/45px gothaProBol;
     @include max-width(830px) {
         position: absolute;
         top: 20px;
@@ -1259,6 +1415,11 @@ header {
     }
     @include max-width(550px) {
         font-size: 20px;
+        top: 0px;
+    }
+    @include max-height(450px) {
+        font: 13px/10px gothaProBol;
+        top: -20px;
     }
 }
 .about-as-description-box {
@@ -1271,21 +1432,34 @@ header {
     margin-right: 32px;
     @include max-width(830px) {
         height: 100px;
-        overflow-y: scroll;
+        // overflow-y: scroll;
         margin-right: initial;
     }
     @include max-width(550px) {
         font-size: 12px;
     }
     p {
-        color: #171717;
+        line-height: 32px;
+        font-family: gothaProReg;
+        color: rgba(23, 23, 23, 1);
+        font-size: 16px;
+        @include max-width(550px) {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        @include max-height(450px) {
+            font-size: 9px;
+            line-height: 15px;
+        }
     }
-    p:nth-child(1) {
-        margin-bottom: 24px;
+    @include max-height(450px) {
+        height: 26px;
     }
 }
 .about-as-line {
-    width: 10px;
+    position: relative;
+    top: 5px;
+    width: 25px;
     height: 151px;
     height: 16vmin;
     background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
@@ -1310,6 +1484,9 @@ header {
     @include max-width(830px) {
         width: 100%;
         right: initial;
+    }
+    @include max-height(450px) {
+        height: 27vmin;
     }
 }
 .video {
@@ -1359,7 +1536,13 @@ header {
         height: 40px;
     }
     @include max-height(830px) {
+        height: 60px;
+    }
+    @include max-height(700px) {
         height: 40px;
+    }
+    @include max-height(450px) {
+        height: 25px;
     }
     img {
         height: 100%;
@@ -1371,7 +1554,10 @@ header {
 footer {
     height: 100vh;
     padding-top: 97px;
-    background: #EFF6FF;
+    // background: #EFF6FF;
+    @include max-width(850px) {
+        height: 95vh;
+    }
 }
 .footer-container {
     height: 100%;
@@ -1398,6 +1584,24 @@ footer {
     justify-content: center;
     color: #171717;
     margin-right: 56px;
+    transition: 0.3s ease;
+    &:hover {
+        background-color: #3B5998;
+        transition: 0.3s ease;
+        i {
+            color: #fff;
+            transition: 0.3s ease;
+        }
+    }
+    i {
+        color: #3B5998;
+        transition: 0.3s ease;
+    }
+    @include max-height(450px) {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;  
+    }
 }
 .insta-box {
     width: 64px;
@@ -1412,6 +1616,24 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease;
+    &:hover {
+        background-color: #D6249F;
+        transition: 0.3s ease;
+        i {
+            color: #fff;
+            transition: 0.3s ease;
+        }
+    }
+    i {
+        color: #D6249F;
+        transition: 0.3s ease;
+    }
+    @include max-height(450px) {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;  
+    }
 }
 .footer-contact-box {
     display: flex;
@@ -1424,6 +1646,9 @@ footer {
         @include max-width(452px) {
             width: 150px;
         }
+        @include max-height(450px) {
+            width: 130px;
+        }
     }
     img {
         height: 41px;
@@ -1432,43 +1657,86 @@ footer {
             height: 24px;
             width: 24px;
         }
+        @include max-height(450px) {
+            height: 20px;
+            width: 20px;        
+        }
     }
 }
 .phone-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    line-height: 20px;
+}
+.tel-code {
+    font: 14px/16px GothaProMed;
+    letter-spacing: 0;
+    color: rgba(23, 23, 23, 1);
+    @include max-width(500px) {
+        font: 11px/16px GothaProMed;
+    }
+    @include max-height(450px) {
+        font: 11px/12px GothaProMed;
+    }
 }
 .address-box, .mail-box  {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    line-height: 20px;
 }
 .mail-box {
     @include max-width(692px) {
         margin-top: 63px;
     }
+    @include max-height(450px) {
+        margin-top: 0px;
+    }
 }
 .address-type {
     margin: 21px 0;
-    font: Bold 16px/19px Gotham Pro;
+    font: 16px/19px gothaProBol;
     color: #171717;
     @include max-width(452px) {
         font-size: 12px;
     }
+    @include max-height(450px) {
+        font: 10px/0px gothaProBol;
+        margin: 12px 0;
+    }
 }
 .address-type-text {
-    color: #171717;
-    font: Regular 14px/16px Gotham Pro;
+    color: rgba(23, 23, 23, 1);
+    font: 14px/20px gothaProReg;
     @include max-width(452px) {
         font-size: 10px;
+    }
+    @include max-height(450px) {
+        font: 10px/15px gothaProReg;
     }
 }
 .smart-web-box {
     color: #171717;
-    font: Regular 14px/16px Gotham Pro;
+    font: 14px/16px gothaProReg;
     @include max-width(452px) {
-        font-size: 12px;
+        font-size: 11px;
+    }
+    @include max-height(450px) {
+        font: 10px/0px gothaProReg;
+    }
+    .smartweb {
+        font: 14px/16px gothaProBol;
+        letter-spacing: 0;
+        color: #171717;
+        @include max-width(452px) {
+            font-size: 12px;
+        }
+        @include max-height(450px) {
+            font-size: 10px;
+        }
     }
 }
 // index.html ----------- end footer

@@ -37,8 +37,8 @@ $(document).ready(function() {
         $(this).addClass('go-to-big-img-active')
     })
 
-    $('.dropdown-li a').hover(function(){
-        $('.dropdown-li a').toggleClass('dropdown-effect')
+    $('.dropdown-li').hover(function(){
+        $('.dropdown-li').toggleClass('dropdown-effect')
         $(this).toggleClass('dropdown-effect-active')
 
     })

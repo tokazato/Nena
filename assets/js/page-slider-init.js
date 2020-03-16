@@ -1,4 +1,4 @@
-var swiper = new Swiper('.testiiii', {
+var swiper = new Swiper('.page-slider-swiper-container', {
     direction: 'vertical',
     mousewheel: true,
     speed: 1000,
@@ -12,7 +12,7 @@ var swiper = new Swiper('.testiiii', {
     }
 });
 
-var mySwiper = document.querySelector('.testiiii').swiper
+var mySwiper = document.querySelector('.page-slider-swiper-container').swiper
 
 // Now you can use all slider methods like
 
@@ -39,6 +39,7 @@ $('.page-4').click(function(){
 
 mySwiper.on('slideChangeTransitionStart', function () {
     if( $('#page1').hasClass('swiper-slide-active') ) {
+        $('body').css('background', '#fff')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-1').addClass('active-page')
         $('.ball-1').css({
@@ -71,6 +72,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         })
     }
     if( $('#page2').hasClass('swiper-slide-active') ) {
+        $('body').css('background', '#fffeef')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-2').addClass('active-page')
         $('  .popular-swiper-wraper, .popular-swiper-description-box').addClass('slide-up-class')  
@@ -104,6 +106,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         })
     }
     if( $('#page3').hasClass('swiper-slide-active') ) {
+        $('body').css('background', '#FCF5F7')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-3').addClass('active-page')
         $('.about-as-slider').addClass('slide-up-class')
@@ -140,6 +143,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         })
     }
     if( $('#page4').hasClass('swiper-slide-active') ) {
+        $('body').css('background', '#EFF6FF')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-4').addClass('active-page')
         $('.fb-box').addClass('slide-from-left')
