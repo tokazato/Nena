@@ -731,6 +731,14 @@ header {
             height: 15vmin;
             width: 8vmin;
         }
+        @include max-width(720px) {
+            height: 25vmin;
+            width: 15vmin;
+        }
+        @include max-width(450px) {
+            height: 45vmin;
+            width: 26vmin;
+        }
     }
 }
 // .slider-main-img-big-box-mobile {
@@ -995,6 +1003,7 @@ header {
     display: none;
     text-align: center;
     font-family: gothaProMed;
+    margin-top: 15px;
     @include max-width(720px) {
         display: block;
     }
@@ -1054,12 +1063,16 @@ header {
     text-align: center;
     font-size: 36px;
     color: #383C5D;
-
     @include max-width(800px) {
         margin-bottom: 6%;
     }
+    @include max-width(720px) {
+        font-size: 25px;
+        margin-bottom: 2%;
+    }
     @include max-width(680px) {
         font-size: 20px;
+        margin-bottom: 6%;
     }
     @include max-height(450px) {
         font-size: 4vmin;
@@ -1339,6 +1352,8 @@ header {
 .right-pagenation {
     text-align: right;
     margin: 0 24px;
+    position: relative;
+    bottom: 10px;
 }
 // index.html ----------- start populart product
 
@@ -1480,6 +1495,7 @@ header {
     @include max-width(830px) {
         width: 100%;
         right: initial;
+        height: 35vmin;
     }
     @include max-width(830px) {
         width: 100%;
@@ -1536,7 +1552,7 @@ header {
         height: 40px;
     }
     @include max-height(830px) {
-        height: 60px;
+        height: 40px;
     }
     @include max-height(700px) {
         height: 40px;
@@ -1692,6 +1708,9 @@ footer {
     @include max-width(692px) {
         margin-top: 63px;
     }
+    @include max-width(450px) {
+        margin-top: 35px;
+    }
     @include max-height(450px) {
         margin-top: 0px;
     }
@@ -1701,7 +1720,8 @@ footer {
     font: 16px/19px gothaProBol;
     color: #171717;
     @include max-width(452px) {
-        font-size: 12px;
+        font: 12px/19px gothaProBol;
+        margin: 5px 0;
     }
     @include max-height(450px) {
         font: 10px/0px gothaProBol;
