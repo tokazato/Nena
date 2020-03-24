@@ -2829,7 +2829,7 @@
             font: 14px/16px gothaProMed;
         }
     }
-    .honey__swiper__img {
+    .honey__swiper__img, .honey__swiper__video {
         width: 183px;
         height: 120px;
         position: relative;
@@ -3433,8 +3433,27 @@
             }
         }
         .popup-top-swiper-slide {
+            .export__media__video {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            iframe {
+                height: 80%;
+                width: 80%;
+            }
             img {
+                height: 370px;
+                width: 550px;
                 object-fit: contain;
+                @include max-width(930px) {
+                    height: 300px;
+                    width: 450px;
+                }
+                @include max-width(760px) {
+                    height: 100%;
+                    width: 80%;
+                }
             }
             @include max-width(550px) {
                 width: 270px;
