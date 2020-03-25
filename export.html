@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Nena</title>
@@ -40,7 +41,7 @@
                                 </ul>
                             </li>
                             <li class="header-nav-li">
-                                <a class="nav-link" href="#!">PRODUCTION</a>
+                                <a class="nav-link" href="production.html">PRODUCTION</a>
                             </li>
                             <li class="header-nav-li dropdown-title">
                                 <a class="nav-link" href="products.html"> PRODUCTS</a>
@@ -167,20 +168,26 @@
     <div class="export__information__form">
         <h2 class="export__information__title">Please fill following fields</h2>
         <form class="export__form">
-            <input type="text" placeholder="Full Name">
-            <select name="" id="">
-                <option value="">Italy</option>
-                <option value="">Germany</option>
-                <option value="">France</option>
-                <option value="">Spain</option>
+            <input type="text" placeholder="Full Name" required>
+            <select id='selUser'>
+                <option value='0'>Country</option> 
+                <option value='1'>Italy</option> 
+                <option value='2'>Germany</option> 
+                <option value='3'>France</option> 
+                <option value='4'>Spain</option> 
+                <option value='5'>USA</option> 
+                <option value='6'>Canada</option> 
+                <option value='7'>Sweden</option> 
             </select>
+            <input id="select-result" type="hidden" value="" required>
+
             <div class="export__form__phone">
-                <input type="tel" placeholder="Phone number">
+                <input type="tel" placeholder="Phone number" required>
                 <i class="fab fa-whatsapp export__form__whatsapp"></i>
             </div>
-            <input type="email" placeholder="E-mail Address">
-            <textarea name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
-            <button type="submit"> <i class="fas fa-paper-plane"></i> Send</button>
+            <input type="email" placeholder="E-mail Address" required>
+            <textarea name="" id="" cols="30" rows="4" placeholder="Message" required></textarea>
+            <button id="export-submit" type="submit"> <i class="fas fa-paper-plane"></i> Send</button>
         </form>
     </div>
     <div class="export__recipient">
@@ -297,6 +304,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/main.js"></script>  
+    <script src="assets/js/select2.js"></script>
 
 </body>
 </html>

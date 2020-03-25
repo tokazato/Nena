@@ -332,14 +332,45 @@
 }
 .dropdown-title {
     position: relative;
+    @include max-width(1000px) {
+        margin: 0 50px 0px 0;
+    }
+    @include max-width(800px) {
+        margin: 0 0 36px 0;
+    }
+    &::before {
+        content: '...';
+        position: absolute;
+        font-size: 20px;
+        font-weight: bold;
+        right: -17px;
+        bottom: 2px;
+        cursor: pointer;
+        @include max-width(800px) {
+            right: -10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    &:nth-child(2) {
+        &::before {
+            @include max-width(800px) {
+                right: 5px;
+            }
+        }
+    }
     a {
         padding-bottom: 20px;
     }
     &:hover {
+        &::before {
+            @include max-width(800px) {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
         .dropdown-ul {
             opacity: 1;
             visibility: visible;
-            transition: 0.6s ease;
+            transition: 0.3s ease;
         }
         .nav-link::after {
             height: 60px; 
@@ -354,7 +385,7 @@
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
-    transition: 0.6s ease;
+    transition: 0.3s ease;
     width: max-content;
     z-index: 2;
     @include max-width(800px) {
@@ -1463,10 +1494,21 @@
         font-size: 12px;
     }
     p {
+        position: relative;
         line-height: 32px;
         font-family: gothaProReg;
         color: rgba(23, 23, 23, 1);
         font-size: 16px;
+        padding-left: 16px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+        }
         @include max-width(550px) {
             font-size: 12px;
             line-height: 20px;
@@ -1480,19 +1522,19 @@
         height: 26px;
     }
 }
-.about-as-line {
-    position: relative;
-    top: 5px;
-    width: 25px;
-    height: 151px;
-    height: 16vmin;
-    background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
-    display: flex;
-    margin-right: 32px;
-    @include max-width(830px) {
-        display: none;
-    }
-}
+// .about-as-line {
+//     position: relative;
+//     top: 5px;
+//     width: 25px;
+//     height: 151px;
+//     height: 16vmin;
+//     background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+//     display: flex;
+//     margin-right: 32px;
+//     @include max-width(830px) {
+//         display: none;
+//     }
+// }
 .about-as-video-box {
     // width: 504px;
     width: 42%;
@@ -2049,7 +2091,11 @@
                 width: 279px;
                 height: 56px;
                 padding-left: 16px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
                 border: 1px solid #DDDDDD;
+                // background-color: #fff;
                 border-radius: 5px;
                 margin-right: 12px;
                 margin-bottom: 12px;
@@ -2067,9 +2113,27 @@
                     margin-right: 0px;
                 }
             }
-             option {
+            .select2 {
+                @include max-width(1000px) {
+                    margin-bottom: 12px;
+                }
+            }
+            .select2-selection {
+                border: 1px solid #DDDDDD;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                font: 12px/14px gothaProReg;
+            }
+            .select2-selection__rendered {
+                font: 12px/14px gothaProReg;
                 color: rgba(23, 23, 23, 0.7);
-                margin-top: 10px;
+                padding-left: 16px;
+            }
+            .select2-selection__arrow {
+                top: 15px;
+                right: 10px;
+                color: rgba(23, 23, 23, 0.7);
             }
             textarea {
                 width: 575px;
@@ -3444,14 +3508,15 @@
             }
             img {
                 height: 370px;
+                height: 55vmin;
                 width: 550px;
                 object-fit: contain;
                 @include max-width(930px) {
-                    height: 300px;
+                    height: 40vmin;
                     width: 450px;
                 }
                 @include max-width(760px) {
-                    height: 100%;
+                    // height: 100%;
                     width: 80%;
                 }
             }

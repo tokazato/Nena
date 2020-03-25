@@ -505,15 +505,56 @@
   position: relative;
 }
 
+@media only screen and (max-width: 1000px) {
+  .dropdown-title {
+    margin: 0 50px 0px 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .dropdown-title {
+    margin: 0 0 36px 0;
+  }
+}
+
+.dropdown-title::before {
+  content: '...';
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  right: -17px;
+  bottom: 2px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .dropdown-title::before {
+    right: -10px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .dropdown-title:nth-child(2)::before {
+    right: 5px;
+  }
+}
+
 .dropdown-title a {
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .dropdown-title:hover::before {
+    color: white;
+  }
 }
 
 .dropdown-title:hover .dropdown-ul {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .dropdown-title:hover .nav-link::after {
@@ -528,8 +569,8 @@
   background-color: #fff;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -2192,10 +2233,22 @@
 }
 
 .about-as-description-text p {
+  position: relative;
   line-height: 32px;
   font-family: gothaProReg;
   color: #171717;
   font-size: 16px;
+  padding-left: 16px;
+}
+
+.about-as-description-text p:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
 }
 
 @media only screen and (max-width: 550px) {
@@ -2215,25 +2268,6 @@
 @media only screen and (max-height: 450px) {
   .about-as-description-text {
     height: 26px;
-  }
-}
-
-.about-as-line {
-  position: relative;
-  top: 5px;
-  width: 25px;
-  height: 151px;
-  height: 16vmin;
-  background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 32px;
-}
-
-@media only screen and (max-width: 830px) {
-  .about-as-line {
-    display: none;
   }
 }
 
@@ -3107,6 +3141,9 @@
   width: 279px;
   height: 56px;
   padding-left: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 1px solid #DDDDDD;
   border-radius: 5px;
   margin-right: 12px;
@@ -3133,9 +3170,34 @@
   }
 }
 
-.export__information__form .export__form option {
+@media only screen and (max-width: 1000px) {
+  .export__information__form .export__form .select2 {
+    margin-bottom: 12px;
+  }
+}
+
+.export__information__form .export__form .select2-selection {
+  border: 1px solid #DDDDDD;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font: 12px/14px gothaProReg;
+}
+
+.export__information__form .export__form .select2-selection__rendered {
+  font: 12px/14px gothaProReg;
   color: rgba(23, 23, 23, 0.7);
-  margin-top: 10px;
+  padding-left: 16px;
+}
+
+.export__information__form .export__form .select2-selection__arrow {
+  top: 15px;
+  right: 10px;
+  color: rgba(23, 23, 23, 0.7);
 }
 
 .export__information__form .export__form textarea {
@@ -5184,6 +5246,7 @@
 
 .swiper-popup .swiper-popup-content .popup-top-swiper-slide img, .swiper-popup-video .swiper-popup-content .popup-top-swiper-slide img {
   height: 370px;
+  height: 55vmin;
   width: 550px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -5191,14 +5254,13 @@
 
 @media only screen and (max-width: 930px) {
   .swiper-popup .swiper-popup-content .popup-top-swiper-slide img, .swiper-popup-video .swiper-popup-content .popup-top-swiper-slide img {
-    height: 300px;
+    height: 40vmin;
     width: 450px;
   }
 }
 
 @media only screen and (max-width: 760px) {
   .swiper-popup .swiper-popup-content .popup-top-swiper-slide img, .swiper-popup-video .swiper-popup-content .popup-top-swiper-slide img {
-    height: 100%;
     width: 80%;
   }
 }

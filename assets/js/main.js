@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+  document.addEventListener("touchstart", function() {},false);
+
+  try {
+
+    // Initialize select2
+    $("#selUser").select2();
+ 
+    // Read selected option
+    $('#export-submit').click(function() {
+     //  var username = $('#selUser option:selected').text();
+      var userid = $('#selUser').val();
+      
+      $('#select-result').val(userid);
+      console.log( $('#select-result').val())
+  
+    });
+    
+  } catch (error) {
+    
+  }
+
     $('.video').parent().click(function () {
         if($(this).children(".video").get(0).paused){
             $(this).children(".video").get(0).play();
@@ -193,5 +214,7 @@ $(document).ready(function() {
       }
     });
     //  swiper popup init end 
+
+   
     
 });
