@@ -144,6 +144,15 @@
     max-width: 1016px;
     margin: 0 auto;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
 // html {
 //     scroll-behavior: smooth;
 // }
@@ -2154,6 +2163,9 @@
                     width: 100%;
                 }
             }
+            .contact__from__error {
+                border: 1px solid red !important;
+            }
             button {
                 cursor: pointer;
                 width: 575px;
@@ -3443,6 +3455,9 @@
                 background: #418B3D 0% 0% no-repeat padding-box;
                 color: #fff;
             }
+        }
+        .contact__from__error {
+            border: 1px solid red !important;
         }
     }
 }

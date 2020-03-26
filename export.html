@@ -168,7 +168,7 @@
     <div class="export__information__form">
         <h2 class="export__information__title">Please fill following fields</h2>
         <form class="export__form">
-            <input type="text" placeholder="Full Name" required>
+            <input class="conctact__input__name" type="text" placeholder="Full Name">
             <select id='selUser'>
                 <option value='0'>Country</option> 
                 <option value='1'>Italy</option> 
@@ -179,14 +179,14 @@
                 <option value='6'>Canada</option> 
                 <option value='7'>Sweden</option> 
             </select>
-            <input id="select-result" type="hidden" value="" required>
+            <input id="select-result" type="hidden" value="">
 
             <div class="export__form__phone">
-                <input type="tel" placeholder="Phone number" required>
+                <input class="conctact__input__tel" type="number" placeholder="Phone number">
                 <i class="fab fa-whatsapp export__form__whatsapp"></i>
             </div>
-            <input type="email" placeholder="E-mail Address" required>
-            <textarea name="" id="" cols="30" rows="4" placeholder="Message" required></textarea>
+            <input class="conctact__input__email" type="email" placeholder="E-mail Address">
+            <textarea class="conctact__input__text" name="" id="" cols="30" rows="4" placeholder="Message"></textarea>
             <button id="export-submit" type="submit"> <i class="fas fa-paper-plane"></i> Send</button>
         </form>
     </div>

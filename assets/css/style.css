@@ -228,6 +228,17 @@
   margin: 0 auto;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
 .scroll-none {
   overflow: hidden;
 }
@@ -3227,6 +3238,10 @@
   }
 }
 
+.export__information__form .export__form .contact__from__error {
+  border: 1px solid red !important;
+}
+
 .export__information__form .export__form button {
   cursor: pointer;
   width: 575px;
@@ -5163,6 +5178,10 @@
   border: 1px solid #418B3D;
   background: #418B3D 0% 0% no-repeat padding-box;
   color: #fff;
+}
+
+.contact__shop__box .contact__form .contact__from__error {
+  border: 1px solid red !important;
 }
 
 .swiper-popup, .swiper-popup-video {

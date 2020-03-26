@@ -21,15 +21,97 @@ $(document).ready(function() {
     
   }
 
-    $('.video').parent().click(function () {
-        if($(this).children(".video").get(0).paused){
-            $(this).children(".video").get(0).play();
-            $(this).children(".playpause").fadeOut();
-        }else{
-           $(this).children(".video").get(0).pause();
-            $(this).children(".playpause").fadeIn();
-        }
-    });
+  $('#contact__form__submit, #export-submit').on('click', function(){
+    var nameInput = $('.conctact__input__name')
+    var phoneInput = $('.conctact__input__tel')
+    var emailInput = $('.conctact__input__email') 
+    var contactText = $('.conctact__input__text')
+
+    if(nameInput.val().length < 2) {
+      nameInput.addClass('contact__from__error')
+      event.preventDefault()
+    }else {
+      nameInput.removeClass('contact__from__error')
+    }
+
+    if(phoneInput.val().length < 9) {
+      phoneInput.addClass('contact__from__error')
+      event.preventDefault()
+    }else {
+      phoneInput.removeClass('contact__from__error')
+    }
+
+    if(contactText.val().length < 6) {
+      contactText.addClass('contact__from__error')
+      event.preventDefault()
+    }else {
+      contactText.removeClass('contact__from__error')
+    }
+      
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+      if (testEmail.test( emailInput.val())) {
+        emailInput.removeClass('contact__from__error');
+      } else {
+        emailInput.addClass('contact__from__error');
+        event.preventDefault()
+      }
+  })
+
+  // check contact form on keyup 
+  $('#contact__form input, #contact__form textarea, .export__form input, .export__form textarea').keyup(function(){
+    var nameInput = $('.conctact__input__name')
+    var phoneInput = $('.conctact__input__tel')
+    var emailInput = $('.conctact__input__email') 
+    var contactText = $('.conctact__input__text')
+
+    if(nameInput.val().length < 2) {
+      nameInput.addClass('contact__from__error')
+      event.preventDefault()
+    }else {
+      nameInput.removeClass('contact__from__error')
+    }
+
+    if(phoneInput.val().length < 9) {
+      phoneInput.addClass('contact__from__error')
+      event.preventDefault()
+    }else {
+      phoneInput.removeClass('contact__from__error')
+    }
+
+    if(contactText.val().length < 6) {
+      contactText.addClass('contact__from__error')
+      event.preventDefault()
+    }else {
+      contactText.removeClass('contact__from__error')
+    }
+      
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+      if (testEmail.test( emailInput.val())) {
+        emailInput.removeClass('contact__from__error');
+      } else {
+        emailInput.addClass('contact__from__error');
+        event.preventDefault()
+      }
+  })
+
+  $('#export-submit').click(function(){
+    if( $('#select-result').val() == 0 ) {
+      $('.select2-selection').addClass('contact__from__error')
+      event.preventDefault()
+    } else {
+      $('.select2-selection').removeClass('contact__from__error')
+    }
+  })
+
+  // $('.video').parent().click(function () {
+  //     if($(this).children(".video").get(0).paused){
+  //         $(this).children(".video").get(0).play();
+  //         $(this).children(".playpause").fadeOut();
+  //     }else{
+  //         $(this).children(".video").get(0).pause();
+  //         $(this).children(".playpause").fadeIn();
+  //     }
+  // });
 
     $('.burger-main-box').click(function() {
         $('.header-nav').toggleClass('open-nav');
@@ -118,102 +200,108 @@ $(document).ready(function() {
     })
     
 
-    // honey slider img init start 
-    var honeyImgSwiper = new Swiper('.honey-img-swiper-container', {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        // pagination: {
-        //   el: '.swiper-pagination',
-        //   clickable: true,
-        // },
-        navigation: {
-            nextEl: '.honey-img-next',
-            prevEl: '.honey-img-prev',
-        },
-        breakpoints: {
-            320: {
-              slidesPerView: 2.6,
-            },
-            650: {
-              slidesPerView: 2.6,
-            },
-            950: {
-                slidesPerView: 3,
+    if( $('.honey-img-swiper-container').length != 0 ) {
+      // honey slider img init start 
+      var honeyImgSwiper = new Swiper('.honey-img-swiper-container', {
+          slidesPerView: 5,
+          spaceBetween: 20,
+          // pagination: {
+          //   el: '.swiper-pagination',
+          //   clickable: true,
+          // },
+          navigation: {
+              nextEl: '.honey-img-next',
+              prevEl: '.honey-img-prev',
+          },
+          breakpoints: {
+              320: {
+                slidesPerView: 2.6,
               },
-            1224: {
-              slidesPerView: 4,
-            },
-          }
-      });
-     // honey slider img init end 
+              650: {
+                slidesPerView: 2.6,
+              },
+              950: {
+                  slidesPerView: 3,
+                },
+              1224: {
+                slidesPerView: 4,
+              },
+            }
+        });
+       // honey slider img init end 
+    }
       
 
-     // honey slider video init start 
-    var swiper = new Swiper('.honey-video-swiper-container', {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        // pagination: {
-        //   el: '.swiper-pagination',
-        //   clickable: true,
-        // },
-        navigation: {
-            nextEl: '.honey-video-next',
-            prevEl: '.honey-video-prev',
-        },
-        breakpoints: {
-            320: {
-              slidesPerView: 2.6,
-            },
-            650: {
-              slidesPerView: 2.6,
-            },
-            950: {
-                slidesPerView: 3,
-              },
-            1224: {
-              slidesPerView: 4,
-            },
-          }
-      });
-     // honey slider video init end 
+    if( $('.honey-video-swiper-container').length != 0 ) {
+      // honey slider video init start 
+     var swiper = new Swiper('.honey-video-swiper-container', {
+         slidesPerView: 5,
+         spaceBetween: 20,
+         // pagination: {
+         //   el: '.swiper-pagination',
+         //   clickable: true,
+         // },
+         navigation: {
+             nextEl: '.honey-video-next',
+             prevEl: '.honey-video-prev',
+         },
+         breakpoints: {
+             320: {
+               slidesPerView: 2.6,
+             },
+             650: {
+               slidesPerView: 2.6,
+             },
+             950: {
+                 slidesPerView: 3,
+               },
+             1224: {
+               slidesPerView: 4,
+             },
+           }
+       });
+      // honey slider video init end 
+    }
 
-    //  swiper popup init start 
-    var galleryThumbs = new Swiper('.popup-swiper-gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 6,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 2.6,
-        },
-        650: {
-          slidesPerView: 2.6,
-        },
-        950: {
-            slidesPerView: 3,
+    if( $('.popup-swiper-gallery-thumbs').length != 0 ) {
+      //  swiper popup init start 
+      var galleryThumbs = new Swiper('.popup-swiper-gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          320: {
+            slidesPerView: 2.6,
           },
-        1224: {
-          slidesPerView: 4,
+          650: {
+            slidesPerView: 2.6,
+          },
+          950: {
+              slidesPerView: 3,
+            },
+          1224: {
+            slidesPerView: 4,
+          },
+        }
+      });
+      var popupGalleryTop = new Swiper('.popup-swiper-gallery-top', {
+        spaceBetween: 10,
+        pagination: {
+          el: '.popup-swiper-pagenation',
+          type: 'fraction',
         },
-      }
-    });
-    var popupGalleryTop = new Swiper('.popup-swiper-gallery-top', {
-      spaceBetween: 10,
-      pagination: {
-        el: '.popup-swiper-pagenation',
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: '.popup-swiper-next',
-        prevEl: '.popup-swiper-prev',
-      },
-      thumbs: {
-        swiper: galleryThumbs
-      }
-    });
-    //  swiper popup init end 
+        navigation: {
+          nextEl: '.popup-swiper-next',
+          prevEl: '.popup-swiper-prev',
+        },
+        thumbs: {
+          swiper: galleryThumbs
+        }
+      });
+      //  swiper popup init end 
+    }
 
    
     
