@@ -104,6 +104,24 @@
         height: 100vh;
     }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 .slide-up-class {
     position: relative;
     bottom: -50px;
@@ -413,7 +431,7 @@ input[type=number] {
     }
     a {
         color: #171717;
-        font: Bold 10px/12px Gotham Pro;
+        font:  10px/12px gothaProBol;
         transition: 0.5s ease;
         .nav-link::after {
             height: 60px; 
@@ -465,7 +483,7 @@ input[type=number] {
         padding: 13px;
         color: #2C3D4F;
         border: 1px solid #418B3D;
-        font: Bold 13px/15px Gotham Pro;
+        font:  13px/15px gothaProBol;
         @include max-width(800px) {
             padding: 7px;
             font-size: 10px;
@@ -617,7 +635,7 @@ input[type=number] {
     animation: ball 3s ease 1s forwards;
 }
 .pagenation-number {
-    font: Bold 16px/19px Gotham Pro;
+    font:  16px/19px gothaProBold;
     font-weight: bold;
     letter-spacing: 0;
     color: rgba(23, 23, 23, 0.3);
@@ -976,7 +994,7 @@ input[type=number] {
     }
 }
 .description-btn {
-    font: Bold 12px/14px Gotham Pro;
+    font:  12px/14px gothaProBol;
     letter-spacing: 0;
     color: #746d6d;
     opacity: 1;
@@ -1568,6 +1586,7 @@ input[type=number] {
 .video {
     width: 100%;
     height: 100%;
+    border: none;
 }
 .playpause {
     background-image:url("../img/Group37.png");
@@ -1747,14 +1766,14 @@ input[type=number] {
     line-height: 20px;
 }
 .tel-code {
-    font: 14px/16px GothaProMed;
+    font: 14px/16px gothaProMed;
     letter-spacing: 0;
     color: rgba(23, 23, 23, 1);
     @include max-width(500px) {
-        font: 11px/16px GothaProMed;
+        font: 11px/16px gothaProMed;
     }
     @include max-height(450px) {
-        font: 11px/12px GothaProMed;
+        font: 11px/12px gothaProMed;
     }
 }
 .address-box, .mail-box  {
@@ -1999,12 +2018,12 @@ input[type=number] {
         &__presentation {
             margin-top: 24px;
             margin-bottom: 10px;
-            font: 20px/23px GothaProMed;
+            font: 20px/23px gothaProMed;
             letter-spacing: 0;
             color: #171717;
         }
         &__documents {
-            font: 15px/17px GothaProReg;
+            font: 15px/17px gothaProReg;
             letter-spacing: 0;
             color: #171717;
         }
@@ -2065,12 +2084,12 @@ input[type=number] {
 .export__information {
     display: flex;
     justify-content: center;
-    @include max-width(650px) {
+    @include max-width(690px) {
         flex-direction: column-reverse;
         margin: 0 24px;
     }
     &__title {
-        font: 14px/16px GothaProMed;
+        font: 14px/16px gothaProMed;
         letter-spacing: 0;
         color: #418B3D;
         background: rgba(138, 187, 42, 0.12);
@@ -2079,7 +2098,7 @@ input[type=number] {
         padding: 13px 24px ;
         margin-bottom: 24px;
         text-align: center;
-        @include max-width(650px) {
+        @include max-width(690px) {
             width: 100%;
         }
     }
@@ -2090,7 +2109,7 @@ input[type=number] {
         @include max-width(1000px) {
             width: 250px;
         }
-        @include max-width(650px) {
+        @include max-width(690px) {
             width: 100%;
             margin-right: 0px;
             margin-top: 40px;
@@ -2117,7 +2136,7 @@ input[type=number] {
                 @include max-width(1000px) {
                     width: 250px;
                 }
-                @include max-width(650px) {
+                @include max-width(690px) {
                     width: 100%;
                     margin-right: 0px;
                 }
@@ -2133,6 +2152,9 @@ input[type=number] {
                 display: flex;
                 align-items: center;
                 font: 12px/14px gothaProReg;
+                &:hover {
+                    border: 1px solid #171717;
+                }
             }
             .select2-selection__rendered {
                 font: 12px/14px gothaProReg;
@@ -2159,7 +2181,7 @@ input[type=number] {
                 @include max-width(1000px) {
                     width: 250px;
                 }
-                @include max-width(650px) {
+                @include max-width(690px) {
                     width: 100%;
                 }
             }
@@ -2195,7 +2217,7 @@ input[type=number] {
                 @include max-width(1000px) {
                     width: 250px;
                 }
-                @include max-width(650px) {
+                @include max-width(690px) {
                     width: 100%;
                 }
             }
@@ -2203,9 +2225,8 @@ input[type=number] {
                 display: inline-flex;
                 position: relative;
                 &:hover {
-                    .export__form__whatsapp {
+                    .export__form__whatsapp, .export__form__viber {
                         border-left: 1px solid #171717;
-                        opacity: 1;
                         transition: 0.3s ease;
                     }
                     input {
@@ -2213,23 +2234,46 @@ input[type=number] {
                         transition: 0.3s ease;
                     }
                 }
-                @include max-width(650px) {
+                @include max-width(690px) {
                     width: 100%;
                 }
             }
-            &__whatsapp {
+            &__whatsapp, &__viber {
                 transition: 0.3s ease;
                 position: absolute;
-                right: 12px;
                 top: 42%;
                 transform: translate(0, -50%);
                 width: 56px;
-                height: 56px;
+                height: 55px;
                 border-left: 1px solid #E3E3E3;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                opacity: 0.6;
+                opacity: 0.4;
+                cursor: pointer;
+                font-size: 20px;
+                transition: 0.3s ease;
+                &:hover {
+                    font-size: 23px;
+                    transition: 0.3s ease;
+                }
+            }
+            &__viber {
+                color: #665CAC;
+                right: 12px;
+                @include max-width(690px) {
+                    right: 0;
+                }
+            }
+            &__whatsapp {
+                right: 68px;
+                color: #075E54;
+                @include max-width(690px) {
+                    right: 56px;
+                }
+            }
+            .viber__whatsapp__active {
+                opacity: 1;
             }
         }
     }
@@ -2237,6 +2281,9 @@ input[type=number] {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include max-width(530px) {
+            align-items: flex-start;
+        }
         &__info__type {
             display: flex;
             margin-bottom: 30px;
@@ -2269,15 +2316,20 @@ input[type=number] {
             }
             .export-phone-num {
                 position: relative;
-                &:hover {
-                     i {
-                        opacity: 1;
-                        color: #075E54;
-                        transition: 0.3s ease;
-                    }
-                }
+                // &:hover {
+                //      .recipient__number_box__whatsapp i {
+                //         opacity: 1;
+                //         color: #075E54;
+                //         transition: 0.3s ease;
+                //     }
+                //     .recipient__number_box__viber i {
+                //         opacity: 1;
+                //         color: #665CAC;
+                //         transition: 0.3s ease;
+                //     }
+                // }
             }
-            .recipient__number_box {
+            .recipient__number_box__whatsapp, .recipient__number_box__viber {
                 transition: 0.3s ease;
                 width: 28px;
                 height: 28px;
@@ -2287,12 +2339,30 @@ input[type=number] {
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                right: -40px;
                 top: -10px;
+                cursor: pointer;
                 i {
-                    opacity: 0.6;
+                    opacity: 0.4;
+                    &:hover {
+                        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                        transform: translate3d(0, 0, 0);
+                        backface-visibility: hidden;
+                        perspective: 1000px;
+                    }
+                }
+                .viber__whatsapp__active {
+                    opacity: 1;
                 }
             }
+            .recipient__number_box__whatsapp{
+                color: #075E54;
+                right: -40px;
+            }
+            .recipient__number_box__viber {
+                color: #665CAC;
+                right: -75px;
+            }
+            
         }
     }
 }
@@ -2344,6 +2414,7 @@ input[type=number] {
             }
             .video {
                 border-radius: 8px;
+                border: none;
             }
         }
     }
@@ -2384,6 +2455,7 @@ input[type=number] {
         float: right;
         width: 462px;
         height: 296px;
+        margin: 0 0 20px 40px;
         @include max-width(670px) {
             float: initial;
             margin-bottom: 24px;
@@ -2394,7 +2466,7 @@ input[type=number] {
         }
     }
     .about__text__content {
-        font:  15px/28px GothaProReg;
+        font:  15px/28px gothaProReg;
         letter-spacing: 0;
         color: #171717;
         position: relative;
@@ -2408,7 +2480,7 @@ input[type=number] {
             left: 0;
         }
         @include max-width(550px) {
-            font:  12px/20px GothaProReg;
+            font:  12px/20px gothaProReg;
         }
     }
 }
@@ -2420,11 +2492,12 @@ input[type=number] {
     flex-direction: column;
     align-items: center;
     .achievment__title {
-        font: 20px/23px GothaProMed;
+        font: 20px/23px gothaProMed;
         letter-spacing: 0;
         color: #171717;
         margin-top: 24px;
         margin-bottom: 48px;
+        text-align: center;
     }
 }
 .achievments {
@@ -2437,16 +2510,98 @@ input[type=number] {
     }
     .achievment {
         background-color: #fff;
-        width: 145px;
-        height: 145px;
+        width: 144px;
+        height: 144px;
         border: 1px solid #DDDDDD;
+        border-left: none;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        box-sizing: content-box;
         @include max-width(500px) {
             width: 91px;
             height: 91px;
+        }
+        &:first-child {
+            border-left: 1px solid #DDDDDD ;
+            @include max-width(341px) {
+                border-bottom: none;
+            }
+        }
+        &:last-child {
+            @include max-width(1080px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+            }
+            @include max-width(501px) {
+                border-left: none ;
+            }
+            @include max-width(433px) {
+                border-left: 1px solid #DDDDDD ;
+            }
+        }
+        &:nth-child(6) {
+            @include max-width(935px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+                border-right: none;
+            }
+            @include max-width(645px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+                border-right: 1px solid #DDDDDD;
+            }
+        }
+        &:nth-child(5) {
+            @include max-width(790px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+                border-right: none;
+            }
+            @include max-width(341px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: 1px solid #DDDDDD ;
+                border-right: 1px solid #DDDDDD ;
+            }
+            @include max-width(341px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+                border-right: none;
+            }
+        }
+        &:nth-child(4) {
+            @include max-width(645px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+                border-right: none;
+            }
+            @include max-width(500px) {
+                border-left: none ;
+                border-top: 1px solid #DDDDDD;
+                border-right: 1px solid #DDDDDD;
+            }
+            @include max-width(433px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: none;
+                border-right: none;
+            }
+            @include max-width(341px) {
+                border-top: 1px solid #DDDDDD;
+                border-right: 1px solid #DDDDDD;
+            }
+        }
+        &:nth-child(3) {
+            @include max-width(341px) {
+                border-left: 1px solid #DDDDDD ;
+                border-top: 1px solid #DDDDDD;
+                border-right: none;
+            }
+        }
+        &:nth-child(2) {
+            @include max-width(341px) {
+                border-bottom: none;
+            }
         }
         &__img {
             @include max-width(500px) {
@@ -2462,11 +2617,11 @@ input[type=number] {
             }
         }
         &__text {
-            font: 13px/15px GothaProReg;
+            font: 13px/15px gothaProReg;
             letter-spacing: 0;
             color: rgba(23, 23, 23, 0.6);
             @include max-width(500px) {
-                font: 10px/12px GothaProReg;
+                font: 10px/12px gothaProReg;
             }
         }
     }
@@ -2508,6 +2663,7 @@ input[type=number] {
                 flex-wrap: wrap;
             }
             a {
+                position: relative;
                 font: 12px/14px gothaProBol;
                 letter-spacing: 0;
                 color: #171717;
@@ -2534,6 +2690,18 @@ input[type=number] {
                 background: transparent linear-gradient(244deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
                 color: #fff;
                 transition: 0.5s ease;
+                &::before {
+                    content: '';
+                    background-image: url(../img/leaf.svg);
+                    position: absolute;
+                    top: -21px;
+                    left: 35%;
+                    height: 22px;
+                    width: 17px;
+                    @include max-width(650px) {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -3644,6 +3812,8 @@ input[type=number] {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            transition: 0.3s ease;
             &:nth-child(1) {
                 margin-right: 24px;
             }
@@ -3654,6 +3824,18 @@ input[type=number] {
             @include max-width(740px) {
                 width: 32px;
                 height: 32px;
+            }
+        }
+        .fb__box {
+            &:hover {
+                background-color: #3B5998;
+                transition: 0.3s ease;
+            }
+        }
+        .insta__box {
+            &:hover {
+                background-color: #D6249F;
+                transition: 0.3s ease;
             }
         }
         @include max-width(740px) {

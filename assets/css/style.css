@@ -176,6 +176,44 @@
   }
 }
 
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
 .slide-up-class {
   position: relative;
   bottom: -50px;
@@ -614,7 +652,7 @@ input[type=number] {
 
 .dropdown-li a {
   color: #171717;
-  font: Bold 10px/12px Gotham Pro;
+  font: 10px/12px gothaProBol;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -691,7 +729,7 @@ input[type=number] {
   padding: 13px;
   color: #2C3D4F;
   border: 1px solid #418B3D;
-  font: Bold 13px/15px Gotham Pro;
+  font: 13px/15px gothaProBol;
 }
 
 @media only screen and (max-width: 800px) {
@@ -915,7 +953,7 @@ input[type=number] {
 }
 
 .pagenation-number {
-  font: Bold 16px/19px Gotham Pro;
+  font: 16px/19px gothaProBold;
   font-weight: bold;
   letter-spacing: 0;
   color: rgba(23, 23, 23, 0.3);
@@ -1440,7 +1478,7 @@ input[type=number] {
 }
 
 .description-btn {
-  font: Bold 12px/14px Gotham Pro;
+  font: 12px/14px gothaProBol;
   letter-spacing: 0;
   color: #746d6d;
   opacity: 1;
@@ -2314,6 +2352,7 @@ input[type=number] {
 .video {
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .playpause {
@@ -2608,20 +2647,20 @@ input[type=number] {
 }
 
 .tel-code {
-  font: 14px/16px GothaProMed;
+  font: 14px/16px gothaProMed;
   letter-spacing: 0;
   color: #171717;
 }
 
 @media only screen and (max-width: 500px) {
   .tel-code {
-    font: 11px/16px GothaProMed;
+    font: 11px/16px gothaProMed;
   }
 }
 
 @media only screen and (max-height: 450px) {
   .tel-code {
-    font: 11px/12px GothaProMed;
+    font: 11px/12px gothaProMed;
   }
 }
 
@@ -2992,13 +3031,13 @@ input[type=number] {
 .export__presentation__title__presentation {
   margin-top: 24px;
   margin-bottom: 10px;
-  font: 20px/23px GothaProMed;
+  font: 20px/23px gothaProMed;
   letter-spacing: 0;
   color: #171717;
 }
 
 .export__presentation__title__documents {
-  font: 15px/17px GothaProReg;
+  font: 15px/17px gothaProReg;
   letter-spacing: 0;
   color: #171717;
 }
@@ -3098,7 +3137,7 @@ input[type=number] {
           justify-content: center;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -3109,7 +3148,7 @@ input[type=number] {
 }
 
 .export__information__title {
-  font: 14px/16px GothaProMed;
+  font: 14px/16px gothaProMed;
   letter-spacing: 0;
   color: #418B3D;
   background: rgba(138, 187, 42, 0.12);
@@ -3122,7 +3161,7 @@ input[type=number] {
   text-align: center;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information__title {
     width: 100%;
   }
@@ -3140,7 +3179,7 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information__form {
     width: 100%;
     margin-right: 0px;
@@ -3174,7 +3213,7 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information__form .export__form input, .export__information__form .export__form select {
     width: 100%;
     margin-right: 0px;
@@ -3197,6 +3236,10 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   font: 12px/14px gothaProReg;
+}
+
+.export__information__form .export__form .select2-selection:hover {
+  border: 1px solid #171717;
 }
 
 .export__information__form .export__form .select2-selection__rendered {
@@ -3232,7 +3275,7 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information__form .export__form textarea {
     width: 100%;
   }
@@ -3283,7 +3326,7 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information__form .export__form button {
     width: 100%;
   }
@@ -3296,9 +3339,8 @@ input[type=number] {
   position: relative;
 }
 
-.export__information__form .export__form__phone:hover .export__form__whatsapp {
+.export__information__form .export__form__phone:hover .export__form__whatsapp, .export__information__form .export__form__phone:hover .export__form__viber {
   border-left: 1px solid #171717;
-  opacity: 1;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -3309,22 +3351,21 @@ input[type=number] {
   transition: 0.3s ease;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 690px) {
   .export__information__form .export__form__phone {
     width: 100%;
   }
 }
 
-.export__information__form .export__form__whatsapp {
+.export__information__form .export__form__whatsapp, .export__information__form .export__form__viber {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   position: absolute;
-  right: 12px;
   top: 42%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   width: 56px;
-  height: 56px;
+  height: 55px;
   border-left: 1px solid #E3E3E3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3335,7 +3376,42 @@ input[type=number] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  opacity: 0.6;
+  opacity: 0.4;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.export__information__form .export__form__whatsapp:hover, .export__information__form .export__form__viber:hover {
+  font-size: 23px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.export__information__form .export__form__viber {
+  color: #665CAC;
+  right: 12px;
+}
+
+@media only screen and (max-width: 690px) {
+  .export__information__form .export__form__viber {
+    right: 0;
+  }
+}
+
+.export__information__form .export__form__whatsapp {
+  right: 68px;
+  color: #075E54;
+}
+
+@media only screen and (max-width: 690px) {
+  .export__information__form .export__form__whatsapp {
+    right: 56px;
+  }
+}
+
+.export__information__form .export__form .viber__whatsapp__active {
+  opacity: 1;
 }
 
 .export__information .export__recipient {
@@ -3349,6 +3425,14 @@ input[type=number] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 530px) {
+  .export__information .export__recipient {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .export__information .export__recipient__info__type {
@@ -3406,14 +3490,7 @@ input[type=number] {
   position: relative;
 }
 
-.export__information .export__recipient__info__type .export-phone-num:hover i {
-  opacity: 1;
-  color: #075E54;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.export__information .export__recipient__info__type .recipient__number_box {
+.export__information .export__recipient__info__type .recipient__number_box__whatsapp, .export__information .export__recipient__info__type .recipient__number_box__viber {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   width: 28px;
@@ -3430,12 +3507,37 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  right: -40px;
   top: -10px;
+  cursor: pointer;
 }
 
-.export__information .export__recipient__info__type .recipient__number_box i {
-  opacity: 0.6;
+.export__information .export__recipient__info__type .recipient__number_box__whatsapp i, .export__information .export__recipient__info__type .recipient__number_box__viber i {
+  opacity: 0.4;
+}
+
+.export__information .export__recipient__info__type .recipient__number_box__whatsapp i:hover, .export__information .export__recipient__info__type .recipient__number_box__viber i:hover {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.export__information .export__recipient__info__type .recipient__number_box__whatsapp .viber__whatsapp__active, .export__information .export__recipient__info__type .recipient__number_box__viber .viber__whatsapp__active {
+  opacity: 1;
+}
+
+.export__information .export__recipient__info__type .recipient__number_box__whatsapp {
+  color: #075E54;
+  right: -40px;
+}
+
+.export__information .export__recipient__info__type .recipient__number_box__viber {
+  color: #665CAC;
+  right: -75px;
 }
 
 .export__media {
@@ -3520,6 +3622,7 @@ input[type=number] {
 
 .export__media__videos .export__media__video .video {
   border-radius: 8px;
+  border: none;
 }
 
 .aboutas {
@@ -3571,6 +3674,7 @@ input[type=number] {
   float: right;
   width: 462px;
   height: 296px;
+  margin: 0 0 20px 40px;
 }
 
 @media only screen and (max-width: 670px) {
@@ -3588,7 +3692,7 @@ input[type=number] {
 }
 
 .about .about__text__content {
-  font: 15px/28px GothaProReg;
+  font: 15px/28px gothaProReg;
   letter-spacing: 0;
   color: #171717;
   position: relative;
@@ -3606,7 +3710,7 @@ input[type=number] {
 
 @media only screen and (max-width: 550px) {
   .about .about__text__content {
-    font: 12px/20px GothaProReg;
+    font: 12px/20px gothaProReg;
   }
 }
 
@@ -3628,11 +3732,12 @@ input[type=number] {
 }
 
 .achievment__head .achievment__title {
-  font: 20px/23px GothaProMed;
+  font: 20px/23px gothaProMed;
   letter-spacing: 0;
   color: #171717;
   margin-top: 24px;
   margin-bottom: 48px;
+  text-align: center;
 }
 
 .achievments {
@@ -3655,9 +3760,10 @@ input[type=number] {
 
 .achievments .achievment {
   background-color: #fff;
-  width: 145px;
-  height: 145px;
+  width: 144px;
+  height: 144px;
   border: 1px solid #DDDDDD;
+  border-left: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3671,12 +3777,128 @@ input[type=number] {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 @media only screen and (max-width: 500px) {
   .achievments .achievment {
     width: 91px;
     height: 91px;
+  }
+}
+
+.achievments .achievment:first-child {
+  border-left: 1px solid #DDDDDD;
+}
+
+@media only screen and (max-width: 341px) {
+  .achievments .achievment:first-child {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .achievments .achievment:last-child {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+  }
+}
+
+@media only screen and (max-width: 501px) {
+  .achievments .achievment:last-child {
+    border-left: none;
+  }
+}
+
+@media only screen and (max-width: 433px) {
+  .achievments .achievment:last-child {
+    border-left: 1px solid #DDDDDD;
+  }
+}
+
+@media only screen and (max-width: 935px) {
+  .achievments .achievment:nth-child(6) {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .achievments .achievment:nth-child(6) {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: 1px solid #DDDDDD;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .achievments .achievment:nth-child(5) {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .achievments .achievment:nth-child(5) {
+    border-left: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .achievments .achievment:nth-child(5) {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .achievments .achievment:nth-child(4) {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .achievments .achievment:nth-child(4) {
+    border-left: none;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+  }
+}
+
+@media only screen and (max-width: 433px) {
+  .achievments .achievment:nth-child(4) {
+    border-left: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .achievments .achievment:nth-child(4) {
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .achievments .achievment:nth-child(3) {
+    border-left: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .achievments .achievment:nth-child(2) {
+    border-bottom: none;
   }
 }
 
@@ -3699,14 +3921,14 @@ input[type=number] {
 }
 
 .achievments .achievment__text {
-  font: 13px/15px GothaProReg;
+  font: 13px/15px gothaProReg;
   letter-spacing: 0;
   color: rgba(23, 23, 23, 0.6);
 }
 
 @media only screen and (max-width: 500px) {
   .achievments .achievment__text {
-    font: 10px/12px GothaProReg;
+    font: 10px/12px gothaProReg;
   }
 }
 
@@ -3771,6 +3993,7 @@ input[type=number] {
 }
 
 .products .products__head .products__type a {
+  position: relative;
   font: 12px/14px gothaProBol;
   letter-spacing: 0;
   color: #171717;
@@ -3808,6 +4031,22 @@ input[type=number] {
   color: #fff;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.products .products__head .products__type .products__type__active::before {
+  content: '';
+  background-image: url(../img/leaf.svg);
+  position: absolute;
+  top: -21px;
+  left: 35%;
+  height: 22px;
+  width: 17px;
+}
+
+@media only screen and (max-width: 650px) {
+  .products .products__head .products__type .products__type__active::before {
+    display: none;
+  }
 }
 
 .products .products__items {
@@ -5436,6 +5675,9 @@ input[type=number] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .footer .social__logo .fb__box:nth-child(1), .footer .social__logo .insta__box:nth-child(1) {
@@ -5452,6 +5694,18 @@ input[type=number] {
     width: 32px;
     height: 32px;
   }
+}
+
+.footer .social__logo .fb__box:hover {
+  background-color: #3B5998;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer .social__logo .insta__box:hover {
+  background-color: #D6249F;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 @media only screen and (max-width: 740px) {

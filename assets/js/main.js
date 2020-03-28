@@ -103,6 +103,11 @@ $(document).ready(function() {
     }
   })
 
+  // export page set active whatsapp or viber icon
+  $('.go-to-active').click(function(){
+    $(this).toggleClass('viber__whatsapp__active')
+  })
+
   // $('.video').parent().click(function () {
   //     if($(this).children(".video").get(0).paused){
   //         $(this).children(".video").get(0).play();

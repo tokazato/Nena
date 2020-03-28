@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.853" height="22.427" viewBox="0 0 17.853 22.427">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.413" y1="0.934" x2="0.881" y2="0.204" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#003114"/>
+      <stop offset="1" stop-color="#438e3e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-0.413" y1="0.066" x2="0.881" y2="0.796" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_118" data-name="Group 118" transform="translate(-1250.608 -210.01)">
+    <path id="Intersection_1" data-name="Intersection 1" d="M-7276-19a12.975,12.975,0,0,1,5-10.463A12.979,12.979,0,0,1-7266-19a12.982,12.982,0,0,1-5,10.464A12.978,12.978,0,0,1-7276-19Z" transform="translate(8476.712 1125.975) rotate(7)" fill="url(#linear-gradient)"/>
+    <path id="Intersection_2" data-name="Intersection 2" d="M0,7.464a9.321,9.321,0,0,0,3.5,7.463A9.322,9.322,0,0,0,7,7.464,9.324,9.324,0,0,0,3.5,0,9.323,9.323,0,0,0,0,7.464Z" transform="translate(1264.134 228.937) rotate(150)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>
