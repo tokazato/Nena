@@ -1,5 +1,52 @@
 $(document).ready(function() {
 
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+  });
+
+  $(document).scroll(function () {
+      //stick nav to top of page
+      var y = $(this).scrollTop();
+      
+      if( $('.wheretobuy__citys').length != 0 ) {
+        var navWrap = $('.wheretobuy__citys').offset().top - 400;
+        if (y > navWrap) {
+            $('.wheretobuy__citys').addClass('slide-up-class2');
+        }
+      }
+
+      if( $('.aboutas').length != 0 ) {
+        var navWrap1 = $('.aboutas').offset().top + 100 ;
+        if (y > navWrap1) {
+          $('.achive').addClass('slide-up-class2');
+        }
+      }
+
+      if( $('.export').length != 0 ) { 
+        var navWrap1 = $('.export').offset().top + 100 ;
+        if (y > navWrap1) {
+          $('.export__presentation').addClass('slide-up-class2');
+        }
+      }
+
+      if( $('.contact').length != 0 ) { 
+        var navWrap1 = $('.contact').offset().top - 300 ;
+        if (y > navWrap1) {
+          $('.bank__detail:nth-child(1) .bank__info').addClass('slide-from-left');
+          $('.bank__detail:nth-child(2) .bank__info').addClass('slide-from-right');
+        }
+      }
+  });
+
+//   $(document).scroll(function () {
+//     //stick nav to top of page
+//     var y = $(this).scrollTop();
+//     var navWrap1 = $('.aboutas').offset().top;
+//     if (y > navWrap1) {
+//         $('.achive').addClass('slide-up-class2');
+//     }
+// });
+
   document.addEventListener("touchstart", function() {},false);
 
   try {

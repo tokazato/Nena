@@ -73,6 +73,24 @@
   }
 }
 
+@-webkit-keyframes fadeIn1 {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
+}
+
+@keyframes fadeIn1 {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
+}
+
 @-webkit-keyframes blur {
   100% {
     opacity: 1;
@@ -212,6 +230,48 @@
     -webkit-transform: translate3d(4px, 0, 0);
             transform: translate3d(4px, 0, 0);
   }
+}
+
+@-webkit-keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.slide-up-class2 {
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
+  -webkit-animation: slide-up 1s ease 0.1s forwards;
+          animation: slide-up 1s ease 0.1s forwards;
 }
 
 .slide-up-class {
@@ -1356,6 +1416,7 @@ input[type=number] {
   -webkit-animation: text-line 1s 1s  ease forwards;
           animation: text-line 1s 1s  ease forwards;
   height: 0;
+  border-radius: 50px;
 }
 
 .arrow-box {
@@ -2296,8 +2357,11 @@ input[type=number] {
   top: 0;
   left: 0;
   width: 3px;
-  height: 100%;
-  background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  height: 0%;
+  border-radius: 40px;
+  background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  -webkit-animation: text-line 1s 1s ease forwards;
+          animation: text-line 1s 1s ease forwards;
 }
 
 @media only screen and (max-width: 550px) {
@@ -2770,6 +2834,7 @@ input[type=number] {
 }
 
 .layout-header {
+  top: -100px;
   border-top: 3px solid #181818;
   width: 100%;
   -webkit-animation: slide-down 0.7s 0.7s ease forwards;
@@ -2990,9 +3055,12 @@ input[type=number] {
 .export__content__texts__box__text__content::before {
   content: '';
   width: 3px;
-  height: 100%;
-  background: transparent linear-gradient(12deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  height: 0%;
   position: absolute;
+  border-radius: 40px;
+  background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  -webkit-animation: text-line 1s 1s ease forwards;
+          animation: text-line 1s 1s ease forwards;
 }
 
 .export__content__texts__box__text__content__p {
@@ -3007,11 +3075,18 @@ input[type=number] {
 
 .export__content__texts__box__img__box {
   width: 40%;
+  position: relative;
+  overflow: hidden;
 }
 
 .export__content__texts__box__img__box img {
   width: 100%;
   height: 100%;
+  position: relative;
+  right: -300px;
+  opacity: 0;
+  -webkit-animation: slide-from-right 2s ease 1s forwards;
+          animation: slide-from-right 2s ease 1s forwards;
 }
 
 @media only screen and (max-width: 800px) {
@@ -3033,6 +3108,7 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 50px;
+  opacity: 0;
 }
 
 .export__presentation__title {
@@ -3687,6 +3763,12 @@ input[type=number] {
   width: 462px;
   height: 296px;
   margin: 0 0 20px 40px;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0.1;
+  border-radius: 50%;
+  -webkit-animation: fadeIn1 1.2s ease 0.4s forwards;
+          animation: fadeIn1 1.2s ease 0.4s forwards;
 }
 
 @media only screen and (max-width: 670px) {
@@ -3714,10 +3796,13 @@ input[type=number] {
 .about .about__text__content::before {
   content: '';
   width: 3px;
-  height: 100%;
-  background: transparent linear-gradient(12deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  height: 0%;
   position: absolute;
   left: 0;
+  border-radius: 40px;
+  background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  -webkit-animation: text-line 1s 1s ease forwards;
+          animation: text-line 1s 1s ease forwards;
 }
 
 @media only screen and (max-width: 550px) {
@@ -3728,6 +3813,7 @@ input[type=number] {
 
 .achive {
   margin: 0 24px;
+  opacity: 0;
 }
 
 .achievment__head {
@@ -4250,6 +4336,7 @@ input[type=number] {
   -webkit-box-shadow: 0px 20px 36px #0000000D;
           box-shadow: 0px 20px 36px #0000000D;
   overflow: hidden;
+  padding-top: 50px;
 }
 
 @media only screen and (max-width: 550px) {
@@ -4280,6 +4367,12 @@ input[type=number] {
 .honey__img {
   width: 312px;
   height: 295px;
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @media only screen and (max-width: 550px) {
@@ -4405,10 +4498,13 @@ input[type=number] {
 .honey__description .honey__text::after {
   content: '';
   width: 3px;
-  height: 100%;
+  height: 0%;
   position: absolute;
   top: 0;
-  background: transparent linear-gradient(25deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  border-radius: 40px;
+  background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  -webkit-animation: text-line 1s 1s ease forwards;
+          animation: text-line 1s 1s ease forwards;
 }
 
 .honey__description .honey__text p {
@@ -4567,6 +4663,8 @@ input[type=number] {
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  -webkit-animation: shake 1s ease 1s forwards;
+          animation: shake 1s ease 1s forwards;
 }
 
 @media only screen and (max-width: 550px) {
@@ -4815,11 +4913,14 @@ input[type=number] {
 .online__shop__btn::before {
   content: '';
   position: absolute;
-  height: 100%;
+  height: 0%;
   width: 3px;
   left: 0;
   top: 0;
+  border-radius: 40px;
   background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  -webkit-animation: text-line 1s 1s ease forwards;
+          animation: text-line 1s 1s ease forwards;
 }
 
 .online__shop__btn span {
@@ -4832,6 +4933,11 @@ input[type=number] {
 .wheretobuy__img {
   position: relative;
   bottom: 30px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0.1;
+  -webkit-animation: fadeIn 1.5s ease 0.1s forwards;
+          animation: fadeIn 1.5s ease 0.1s forwards;
 }
 
 @media only screen and (max-width: 850px) {
@@ -4852,6 +4958,7 @@ input[type=number] {
 }
 
 .wheretobuy__citys {
+  opacity: 0;
   margin: 0 24px 80px 24px;
 }
 
@@ -4948,6 +5055,11 @@ input[type=number] {
   margin-bottom: 48px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0.1;
+  -webkit-animation: fadeIn 1.5s ease 0.1s forwards;
+          animation: fadeIn 1.5s ease 0.1s forwards;
 }
 
 @media only screen and (max-width: 550px) {
@@ -4984,10 +5096,13 @@ input[type=number] {
 .production__content .production__text::after {
   content: '';
   width: 3px;
-  height: 100%;
+  height: 0%;
   position: absolute;
   top: 0;
-  background: transparent linear-gradient(25deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  border-radius: 40px;
+  background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+  -webkit-animation: text-line 1s 1s ease forwards;
+          animation: text-line 1s 1s ease forwards;
 }
 
 .production__content .production__text p {
@@ -5001,6 +5116,11 @@ input[type=number] {
 
 .contact {
   margin: 0 24px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0.3;
+  -webkit-animation: fadeIn 1s ease 0.1s forwards;
+          animation: fadeIn 1s ease 0.1s forwards;
 }
 
 .contact__info h1 {
@@ -5165,6 +5285,10 @@ input[type=number] {
   }
 }
 
+.bank {
+  overflow: hidden;
+}
+
 .bank__details__title {
   text-align: center;
   font: 20px/23px gothaProMed;
@@ -5271,6 +5395,10 @@ input[type=number] {
             justify-content: center;
     border-top: none;
   }
+}
+
+.bank__details .bank__detail .bank__info {
+  opacity: 0;
 }
 
 .bank__details .bank__detail .bank__name {

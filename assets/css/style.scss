@@ -57,6 +57,13 @@
         opacity: 1;
     }
 }
+@keyframes fadeIn1 {
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
 @keyframes blur {
     100% {
         opacity: 1;
@@ -121,7 +128,44 @@
     transform: translate3d(4px, 0, 0);
   }
 }
-
+@-webkit-keyframes zoomInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+@keyframes zoomInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+} 
+.slide-up-class2 {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    animation: slide-up 1s ease 0.1s forwards;
+}
 .slide-up-class {
     position: relative;
     bottom: -50px;
@@ -911,6 +955,7 @@ input[type=number] {
     display: flex;
     animation: text-line 1s 1s  ease forwards;
     height: 0;
+    border-radius: 50px;
 }
 .arrow-box {
     display: flex;
@@ -1533,8 +1578,10 @@ input[type=number] {
             top: 0;
             left: 0;
             width: 3px;
-            height: 100%;
-            background: transparent linear-gradient(26deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+            height: 0%;
+            border-radius: 40px;
+            background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+            animation: text-line 1s 1s ease forwards;
         }
         @include max-width(550px) {
             font-size: 12px;
@@ -1842,6 +1889,7 @@ input[type=number] {
 
 // layout ------------- pages map start
 .layout-header {
+    top: -100px;
     border-top: 3px solid #181818;
     width: 100%;
     animation: slide-down 0.7s 0.7s ease forwards;
@@ -1984,9 +2032,11 @@ input[type=number] {
                 &::before {
                     content: '';
                     width: 3px;
-                    height: 100%;
-                    background: transparent linear-gradient(12deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+                    height: 0%;
                     position: absolute;
+                    border-radius: 40px;
+                    background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+                    animation: text-line 1s 1s ease forwards;
                 }
                 &__p {
                     padding-left: 30px;
@@ -1998,9 +2048,15 @@ input[type=number] {
         }
         &__img__box {
             width: 40%;
+            position: relative;
+            overflow: hidden;
             img {
                 width: 100%;
-                height: 100%
+                height: 100%;
+                position: relative;
+                right: -300px;
+                opacity: 0;
+                animation: slide-from-right 2s ease 1s forwards;
             }
             @include max-width(800px) {
                 width: 100%;
@@ -2014,6 +2070,7 @@ input[type=number] {
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    opacity: 0;
     &__title {
         text-align: center;
         &__presentation {
@@ -2458,6 +2515,10 @@ input[type=number] {
         width: 462px;
         height: 296px;
         margin: 0 0 20px 40px;
+        transform: scale(0.3);
+        opacity: 0.1;
+        border-radius: 50%;
+        animation: fadeIn1 1.2s ease 0.4s forwards;
         @include max-width(670px) {
             float: initial;
             margin: 0 0 24px 0px;
@@ -2476,10 +2537,12 @@ input[type=number] {
         &::before {
             content: '';
             width: 3px;
-            height: 100%;
-            background: transparent linear-gradient(12deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+            height: 0%;
             position: absolute;
             left: 0;
+            border-radius: 40px;
+            background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+            animation: text-line 1s 1s ease forwards;
         }
         @include max-width(550px) {
             font:  12px/20px gothaProReg;
@@ -2488,6 +2551,7 @@ input[type=number] {
 }
 .achive {
     margin: 0 24px;
+    opacity: 0;
 }
 .achievment__head {
     display: flex;
@@ -2832,6 +2896,7 @@ input[type=number] {
     padding: 0 24px 50px 24px;
     box-shadow: 0px 20px 36px #0000000D;
     overflow: hidden;
+    padding-top: 50px;
     @include max-width(550px) {
         margin-bottom: 20px;
         padding: 0 24px 10px 24px;
@@ -2848,6 +2913,12 @@ input[type=number] {
     &__img {
         width: 312px;
         height: 295px;
+        -webkit-animation-name: zoomInLeft;
+        animation-name: zoomInLeft;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
         @include max-width(550px) {
             width: 129px;
             height: 122px;
@@ -2927,10 +2998,12 @@ input[type=number] {
             &::after {
                 content: '';
                 width: 3px;
-                height: 100%;
+                height: 0%;
                 position: absolute;
                 top: 0;
-                background: transparent linear-gradient(25deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+                border-radius: 40px;
+                background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+                animation: text-line 1s 1s ease forwards;
             }
             p {
                 margin-left: 16px;
@@ -3039,6 +3112,7 @@ input[type=number] {
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: 0.3s ease;
+                animation: shake 1s ease 1s forwards;
                 @include max-width(550px) {
                     padding: 13px 24px;
                     font-size: 8px;
@@ -3219,11 +3293,13 @@ input[type=number] {
     &::before {
         content: '';
         position: absolute;
-        height: 100%;
+        height: 0%;
         width: 3px;
         left: 0;
         top: 0;
+        border-radius: 40px;
         background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+        animation: text-line 1s 1s ease forwards;
     }
     span {
         font: 13px/15px gothaProBol;
@@ -3235,6 +3311,9 @@ input[type=number] {
 .wheretobuy__img {
     position: relative;
     bottom: 30px;
+    transform: scale(0.5);
+    opacity: 0.1;
+    animation: fadeIn 1.5s ease 0.1s forwards;
     @include max-width(850px) {
         position: static;
     }
@@ -3248,6 +3327,7 @@ input[type=number] {
     }
 }
 .wheretobuy__citys {
+    opacity: 0;
     margin: 0 24px 80px 24px;
     @include max-width(450px) {
         margin: 0 24px 40px 24px;
@@ -3319,6 +3399,9 @@ input[type=number] {
         width: 100%;
         margin-bottom: 48px;
         object-fit: cover;
+        transform: scale(0.5);
+        opacity: 0.1;
+        animation: fadeIn 1.5s ease 0.1s forwards;
         @include max-width(550px) {
             width: 272px;
             height: 138px;
@@ -3345,10 +3428,12 @@ input[type=number] {
         &::after {
             content: '';
             width: 3px;
-            height: 100%;
+            height: 0%;
             position: absolute;
             top: 0;
-            background: transparent linear-gradient(25deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+            border-radius: 40px;
+            background: transparent linear-gradient(36deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
+            animation: text-line 1s 1s ease forwards;
         }
         p {
             margin-left: 16px;
@@ -3365,6 +3450,9 @@ input[type=number] {
 // contact page start
 .contact {
     margin: 0 24px;
+    transform: scale(0.7);
+    opacity: 0.3;
+    animation: fadeIn 1s ease 0.1s forwards;
 }
 .contact__info {
     h1 {
@@ -3466,6 +3554,9 @@ input[type=number] {
         }
     }
 }
+.bank {
+    overflow: hidden;
+}
 .bank__details__title {
     text-align: center;
     font:  20px/23px gothaProMed;
@@ -3520,6 +3611,9 @@ input[type=number] {
                 justify-content: center;
                 border-top: none;
             }
+        }
+        .bank__info {
+            opacity: 0;
         }
         .bank__name {
             font:  14px/16px gothaProMed;
