@@ -2779,6 +2779,12 @@ input[type=number] {
   z-index: 16;
 }
 
+@media only screen and (max-width: 550px) {
+  .layout-header {
+    border-top: none;
+  }
+}
+
 .layout-header-content {
   padding: 30px 0;
 }
@@ -2890,6 +2896,11 @@ input[type=number] {
 
 .pages__map__container__pages__current__page {
   color: white;
+  margin-left: 3px;
+}
+
+.pages__map__container__pages__home {
+  margin-left: 3px;
 }
 
 .pages__map__container__share {
@@ -2990,7 +3001,7 @@ input[type=number] {
 
 @media only screen and (max-width: 550px) {
   .export__content__texts__box__text__content__p {
-    font-size: 12px;
+    font: 12px/20px gothaProReg;
   }
 }
 
@@ -3664,9 +3675,10 @@ input[type=number] {
 
 @media only screen and (max-width: 550px) {
   .about__title {
-    font-size: 20px;
+    font: 20px/24px gothaProBol;
     text-align: center;
     display: block;
+    margin-bottom: 24px;
   }
 }
 
@@ -3680,7 +3692,7 @@ input[type=number] {
 @media only screen and (max-width: 670px) {
   .about .about__img {
     float: initial;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0px;
   }
 }
 

@@ -1848,6 +1848,9 @@ input[type=number] {
     height: 120px;
     position: relative;
     z-index: 16;
+    @include max-width(550px) {
+        border-top: none;
+    }
 }
 .layout-header-content {
     padding: 30px 0;
@@ -1921,13 +1924,11 @@ input[type=number] {
         }
         &__current__page {
             color: rgba(255, 255, 255, 1);
+            margin-left: 3px;
         }
-        // &__slash {
-        //     margin: 0 10px;
-        //     @include max-width(550px) {
-        //         margin: 0px;
-        //     }
-        // }
+        &__home {
+            margin-left: 3px;
+        }
     }
     &__share {
         font: 12px/14px gothaProMed;
@@ -1990,7 +1991,7 @@ input[type=number] {
                 &__p {
                     padding-left: 30px;
                     @include max-width(550px) {
-                        font-size: 12px;
+                        font: 12px/20px gothaProReg;
                     }
                 }
             }
@@ -2446,9 +2447,10 @@ input[type=number] {
         margin-bottom: 40px;
         display: inline-flex;
         @include max-width(550px) {
-            font-size: 20px;
+            font: 20px/24px gothaProBol;
             text-align: center;
             display: block;
+            margin-bottom: 24px;
         }
     }
     .about__img {
@@ -2458,7 +2460,7 @@ input[type=number] {
         margin: 0 0 20px 40px;
         @include max-width(670px) {
             float: initial;
-            margin-bottom: 24px;
+            margin: 0 0 24px 0px;
         }
         @include max-width(550px) {
             width: 272px;
