@@ -358,7 +358,7 @@ input[type=number] {
         }
     }
     @include max-height(450px) {
-        margin: 0 10px 20px 0;
+        margin: 0 30px 20px 0;
     }
 }
 .nav-link {
@@ -578,6 +578,7 @@ input[type=number] {
                 opacity: 1;
                 visibility: visible;
                 transition: 0.9s ease;
+                font-family: gothaProBol;
             }
         }
     }
@@ -679,9 +680,7 @@ input[type=number] {
     animation: ball 3s ease 1s forwards;
 }
 .pagenation-number {
-    font:  16px/19px gothaProBold;
-    font-weight: bold;
-    letter-spacing: 0;
+    font:  16px/19px gothaProBol;
     color: rgba(23, 23, 23, 0.3);
     text-transform: uppercase;
     opacity: 1;
@@ -1340,7 +1339,7 @@ input[type=number] {
 }
 .popular-swiper-thumbs {
     width: 550px;
-    height: 200px;
+    height: 210px;
     // height: 26vmin;
     position: absolute;
     right: 180px;
@@ -1907,6 +1906,24 @@ input[type=number] {
     width: 100%;
     height: 56px;
     margin-bottom: 56px;
+    position: relative;
+    &::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px dashed rgba(65, 139, 61, 0.4);
+        position: absolute;
+        bottom: 0px;
+        z-index: -1;
+    }
+    &::before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        border-top: 1px dashed rgba(65, 139, 61, 0.4);
+        position: absolute;
+        z-index: -1;
+    }
     @include max-width(550px) {
         margin-bottom: 36px;
         height: 32px;
@@ -1918,15 +1935,6 @@ input[type=number] {
         position: absolute;
         z-index: -1;
         left: 0;
-        @include max-width(550px) {
-            height: 32px;
-        }
-        // @include max-width(1366px) {
-        //     width: 25%;
-        // }
-        // @include max-width(900px) {
-        //     width: 35%;
-        // }
         &::after {
             content: '';
             position: absolute;
@@ -1935,9 +1943,9 @@ input[type=number] {
             height: 56px;
             background: #418B3D 0% 0% no-repeat padding-box;
             clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-            @include max-width(550px) {
-                height: 32px;
-            }
+        }
+        @include max-width(1240px) {
+            display: none;
         }
     }
 }
@@ -1951,13 +1959,13 @@ input[type=number] {
     @include max-width(550px) {
         height: 32px;
     }
-    @include max-width(1200px) {
+    @include max-width(1240px) {
         margin: 0 24px;
     }
     &__pages {
         color: rgba(255, 255, 255, 0.7);
         font: 12px/14px gothaProMed;
-        @include max-width(1300px) {
+        @include max-width(1390px) {
             height: 100%;
             display: flex;
             justify-content: space-between;
@@ -1966,6 +1974,9 @@ input[type=number] {
             clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
             background: #418B3D 0% 0% no-repeat padding-box;
             width: fit-content;
+            position: relative;
+            left: -35px;
+            padding-left: 35px;
         }
         @include max-width(550px) {
             font-size: 10px;
@@ -1981,6 +1992,9 @@ input[type=number] {
     &__share {
         font: 12px/14px gothaProMed;
         color: #171717;
+        @include max-width(550px) {
+            display: none;
+        }
     }
 }
 // layout ------------- pages map end
