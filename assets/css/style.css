@@ -347,7 +347,7 @@ input[type=number] {
 
 @media only screen and (max-width: 500px) {
   .page-slider-swiper-wraper {
-    height: 90vh;
+    height: 98vh;
   }
 }
 
@@ -777,6 +777,7 @@ input[type=number] {
   overflow: hidden;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  border: 1px solid #418B3D;
 }
 
 @media only screen and (max-width: 800px) {
@@ -788,8 +789,9 @@ input[type=number] {
 .language-content-box a {
   padding: 13px;
   color: #2C3D4F;
-  border: 1px solid #418B3D;
   font: 13px/15px gothaProBol;
+  border-top: 1px solid #418B3D;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 800px) {
@@ -799,23 +801,12 @@ input[type=number] {
   }
 }
 
-.language-content-box a:nth-child(1) {
-  color: #fff;
-}
-
-.language-content-box a:nth-child(2) {
-  background-color: #fff;
-}
-
-.language-content-box a:nth-child(3) {
-  border-top: initial;
-  background-color: #fff;
-}
-
-.language-content-box-active {
+.language-content-box .language-content-box-active {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+  background: #418B3D;
+  color: #fff;
 }
 
 .pagenation-box {
@@ -1048,11 +1039,11 @@ input[type=number] {
 }
 
 .main {
-  padding-top: 90px;
+  padding-top: 70px;
 }
 
 .swiper-box {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
   width: 100%;
 }
 
@@ -1279,7 +1270,7 @@ input[type=number] {
 }
 
 .main-swiper-select-content-box {
-  width: 86px;
+  margin: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1293,6 +1284,7 @@ input[type=number] {
   opacity: 0.4;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  text-align: center;
 }
 
 .main-swiper-select-content-box:hover {
@@ -1321,33 +1313,13 @@ input[type=number] {
   cursor: pointer;
 }
 
-.compote-bottle {
-  height: 17vmin;
+.main-slider-small-bottle {
+  height: 10vmin;
 }
 
 @media only screen and (max-height: 450px) {
-  .compote-bottle {
-    height: 10vmin;
-  }
-}
-
-.nectar-bottle {
-  height: 72px;
-}
-
-@media only screen and (max-height: 450px) {
-  .nectar-bottle {
+  .main-slider-small-bottle {
     height: 30px;
-  }
-}
-
-.jam-bottle {
-  height: 57px;
-}
-
-@media only screen and (max-height: 450px) {
-  .jam-bottle {
-    height: 25px;
   }
 }
 
@@ -1666,7 +1638,7 @@ input[type=number] {
 
 @media only screen and (max-width: 850px) {
   .popular-big-box {
-    height: 90vh;
+    height: 98vh;
   }
 }
 
@@ -1703,7 +1675,7 @@ input[type=number] {
 
 @media only screen and (max-width: 680px) {
   .poular-product {
-    padding-top: 105px;
+    padding-top: 70px;
   }
 }
 
@@ -2023,7 +1995,7 @@ input[type=number] {
 @media only screen and (max-width: 720px) {
   .popular-swiper-thumbs {
     width: 175px;
-    height: 160px;
+    height: 172px;
     right: 10%;
   }
 }
@@ -2177,7 +2149,7 @@ input[type=number] {
   text-align: right;
   margin: 0 24px;
   position: relative;
-  bottom: 10px;
+  bottom: 0px;
 }
 
 .about-as-outside-container {
@@ -2187,7 +2159,7 @@ input[type=number] {
 
 @media only screen and (max-width: 720px) {
   .about-as-outside-container {
-    height: 90vh;
+    height: 98vh;
   }
 }
 
@@ -2216,6 +2188,13 @@ input[type=number] {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .about-as {
+    height: calc(100% - 65px);
+    top: 65px;
   }
 }
 
@@ -2274,6 +2253,12 @@ input[type=number] {
   .about-as-description-big-box {
     width: 100%;
     margin: 24px 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .about-as-description-big-box {
+    margin: 15px 0 24px 0;
   }
 }
 
@@ -2406,6 +2391,12 @@ input[type=number] {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .about-as-video-box {
+    height: 45vmin;
+  }
+}
+
 @media only screen and (max-height: 450px) {
   .about-as-video-box {
     height: 27vmin;
@@ -2441,13 +2432,13 @@ input[type=number] {
 
 @media only screen and (max-width: 830px) {
   .about-as-slider {
-    height: 40px;
+    height: 70px;
   }
 }
 
 @media only screen and (max-height: 700px) {
   .about-as-slider {
-    height: 40px;
+    height: 70px;
   }
 }
 
@@ -2508,12 +2499,12 @@ input[type=number] {
 
 .index-footer {
   height: 100vh;
-  padding-top: 97px;
+  padding-top: 70px;
 }
 
 @media only screen and (max-width: 850px) {
   .index-footer {
-    height: 95vh;
+    height: 98vh;
   }
 }
 
@@ -3681,7 +3672,7 @@ input[type=number] {
 
 @media only screen and (max-width: 650px) {
   .export__media__title {
-    font-size: 14px;
+    font: 14px/14px gothaProMed;
   }
 }
 
@@ -3732,6 +3723,10 @@ input[type=number] {
 .export__media__videos .export__media__video .video {
   border-radius: 8px;
   border: none;
+}
+
+.ytp-icon-large-play-button-hover {
+  background: no-repeat url(../assets/img/Group37.png) -10px -2554px;
 }
 
 .aboutas {
@@ -3899,6 +3894,10 @@ input[type=number] {
           justify-content: space-evenly;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+}
+
+.achievments .achievment img {
+  height: 35px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -4648,7 +4647,7 @@ input[type=number] {
 
 @media only screen and (max-width: 550px) {
   .honey__buttons .honey__buy {
-    right: 100px;
+    right: 70px;
   }
 }
 
