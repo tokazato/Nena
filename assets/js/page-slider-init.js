@@ -148,7 +148,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         $('.page-4').addClass('active-page')
         $('.fb-box').addClass('slide-from-left')
         $('.insta-box').addClass('slide-from-right') 
-        $('.smart-web-box').addClass('slide-up-class')
+        // $('.smart-web-box').addClass('slide-up-class')
         $('.ball-1').css({
             left: 'calc(50% - 160px)',
             top: '100px',
