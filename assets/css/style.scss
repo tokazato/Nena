@@ -224,7 +224,7 @@ input[type=number] {
 .page-slider-swiper-wraper {
     height: 100vh;
     @include max-width(500px) {
-        height: 98vh;
+        height: 100vh;
     }
 }
 .index-header {
@@ -1034,13 +1034,13 @@ input[type=number] {
     width: 122px;
     height: 42px;   
     border: 2px solid #EAEAEA;
-    border-radius: 10px;
+    border-radius: 0 10px 0 0;
     opacity: 1;
     background: #fff;
     position: absolute;
     z-index: 15;
     bottom: 0;
-    left: 24px;
+    left: 0px;
     transition: 0.6s ease;
     cursor: pointer;
 }
@@ -1096,14 +1096,12 @@ input[type=number] {
     color: #418B3D;
 }
 .mobile-pagenation {
-    // position: fixed;
-    // top: calc(100vh - 35px);
-    // right: 5%;
-    // z-index: 3;
     display: none;
     text-align: center;
     font-family: gothaProMed;
-    margin-top: 15px;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
     @include max-width(720px) {
         display: block;
     }
@@ -1130,7 +1128,7 @@ input[type=number] {
     height: 100vh;
     // background: rgb(255, 254, 239) 0% 0% no-repeat padding-box;
     @include max-width(850px) {
-        height: 98vh;
+        height: 100vh;
     }
 }
 .popular-box {
@@ -1145,8 +1143,11 @@ input[type=number] {
         flex-direction: column;
         justify-content: space-evenly;
     }
-    @include max-height(700px) {
-        padding-top: 105px;
+    @include max-height(600px) {
+        padding-top: 70px;
+    }
+    @media (max-width: 1000px) and (max-height: 700px) {
+        padding-top: 70px;
     }
     @include max-width(680px) {
         padding-top: 70px;
@@ -1162,9 +1163,12 @@ input[type=number] {
     color: #171717;
     text-align: center;
     font-size: 36px;
-    color: #383C5D;
+    @media (min-width: 1000px) and (min-height: 625px) {
+        position: relative;
+        bottom: 20px;
+    }
     @include max-width(800px) {
-        margin-bottom: 6%;
+        margin-bottom: 4%;
     }
     @include max-width(720px) {
         font-size: 25px;
@@ -1172,7 +1176,7 @@ input[type=number] {
     }
     @include max-width(680px) {
         font-size: 20px;
-        margin-bottom: 6%;
+        margin-bottom: 40px;
     }
     @include max-height(450px) {
         font-size: 4vmin;
@@ -1437,7 +1441,7 @@ input[type=number] {
 }
 .pupular-slider-line-active {
     height: 0%;
-    animation: text-line 2s ease 4s  forwards;
+    animation: text-line 1s ease 0s  forwards;
 }
 .popular--swiper-pagenation {
     transform: rotate(90deg);
@@ -1452,8 +1456,9 @@ input[type=number] {
 .right-pagenation {
     text-align: right;
     margin: 0 24px;
-    position: relative;
-    bottom: 0px;
+    position: absolute;
+    bottom: 16px;
+    right: 0;
 }
 // index.html ----------- start populart product
 
@@ -1463,7 +1468,7 @@ input[type=number] {
     height: 100vh;
     // background: #FCF5F7;
     @include max-width(720px) {
-        height: 98vh;
+        height: 100vh;
     }
 }
 .about-as-container {
@@ -1535,6 +1540,9 @@ input[type=number] {
         left: 50%;
         transform: translate(-50%, 0);
         font-size: 20px;
+    }
+    @include max-width(450px) {
+        top: 20px;
     }
     @include max-height(450px) {
         font: 13px/10px gothaProBol;
@@ -1680,7 +1688,7 @@ input[type=number] {
     padding-top: 70px;
     // background: #EFF6FF;
     @include max-width(850px) {
-        height: 98vh;
+        height: 100vh;
     }
 }
 .footer-container {
@@ -1851,8 +1859,9 @@ input[type=number] {
     font: 14px/16px gothaProReg;
     position: relative;
     bottom: -35px;
-    @include max-width(452px) {
+    @include max-width(650px) {
         font-size: 11px;
+        bottom: 0px;
     }
     @include max-height(450px) {
         font: 10px/0px gothaProReg;
@@ -2173,9 +2182,9 @@ input[type=number] {
             margin-top: 40px;
         }
         .export__form {
-            input, select {
+            input, select, .selected {
                 width: 279px;
-                height: 56px;
+                height: 56px ;
                 padding-left: 16px;
                 -webkit-appearance: none;
                 -moz-appearance: none;
@@ -2199,6 +2208,46 @@ input[type=number] {
                     margin-right: 0px;
                 }
             }
+            // .simple-select {
+            //     width: 279px;
+            //     height: 56px;
+            //     margin-bottom: 12px;
+            //     float: right;
+            //     margin-right: 12px;
+            //     border-bottom: none;
+            //     &:hover {
+            //         .simple-select-modal {
+            //             border: 1px solid #171717;
+            //             border-top: none;
+            //         }
+            //     }
+            //     @include max-width(1000px) {
+            //         width: 250px;
+            //     }
+            //     @include max-width(690px) {
+            //         width: 100%;
+            //         margin-right: 0px;
+            //     }
+            // }
+            // .selected {
+            //     display: flex;
+            //     align-items: center;
+            //     margin: 0;
+            // }
+            // .simple-select-modal {
+            //     position: relative;
+            //     z-index: 5;
+            //     border: 1px solid #DDDDDD;
+            //     border-top: none;
+            //     &:hover {
+            //         .selected {
+            //             border: 1px solid #171717;
+            //         }
+            //     }
+            //     input {
+            //         width: 100%;
+            //     }
+            // }
             .select2 {
                 @include max-width(1000px) {
                     margin-bottom: 12px;
@@ -2505,6 +2554,15 @@ input[type=number] {
 .ytp-icon-large-play-button-hover {
     background: no-repeat url(../assets/img/Group37.png) -10px -2554px;
 }
+.select2-results__option {
+    font: 12px/14px gothaProReg;
+    color: rgba(23, 23, 23, 0.7);
+    padding-left: 16px;
+}
+// .select2-selection__arrow b {
+//     border-color: rgba(23, 23, 23, 0.7) transparent transparent transparent !important;
+// }
+
 // Export Page ----------------------- end 
 
 
@@ -3002,6 +3060,7 @@ input[type=number] {
                 margin: 20px 0px 24px 0px;
             }    
             span {
+                cursor: pointer;
                 width: 67px;
                 height: 45px;
                 background: #fff;
@@ -3026,17 +3085,24 @@ input[type=number] {
                     transition: 0.3s ease;
                 }
             }
-            .honey__g__active {
+            .tab-active {
                 background: transparent linear-gradient(57deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
                 color: #fff;
             }
         }
-        .honey__text {
+        .product__text {
             font: 13px/23px gothaProReg;
             letter-spacing: 0;
             color: #171717;
             margin-bottom: 20px;
             position: relative;
+            width: 510px;
+            @include max-width(600px) {
+                width: 400px;
+            }
+            @include max-width(480px) {
+                width: 100%;
+            }
             &::after {
                 content: '';
                 width: 3px;
@@ -4015,6 +4081,3 @@ input[type=number] {
     }
 }
 // footer end 
-
-
-

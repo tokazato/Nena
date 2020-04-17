@@ -38,6 +38,11 @@ $('.page-4').click(function(){
 })
 
 mySwiper.on('slideChangeTransitionStart', function () {
+
+    for(let i = 0; i < $('iframe').length; i++){
+        $('iframe')[i].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');  
+      }
+      
     if( $('#page1').hasClass('swiper-slide-active') ) {
         $('body').css('background', '#fff')
         $('.pagenation-box a').removeClass('active-page')

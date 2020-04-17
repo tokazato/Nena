@@ -347,7 +347,7 @@ input[type=number] {
 
 @media only screen and (max-width: 500px) {
   .page-slider-swiper-wraper {
-    height: 98vh;
+    height: 100vh;
   }
 }
 
@@ -1517,13 +1517,13 @@ input[type=number] {
   width: 122px;
   height: 42px;
   border: 2px solid #EAEAEA;
-  border-radius: 10px;
+  border-radius: 0 10px 0 0;
   opacity: 1;
   background: #fff;
   position: absolute;
   z-index: 15;
   bottom: 0;
-  left: 24px;
+  left: 0px;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   cursor: pointer;
@@ -1600,7 +1600,9 @@ input[type=number] {
   display: none;
   text-align: center;
   font-family: gothaProMed;
-  margin-top: 15px;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -1638,7 +1640,7 @@ input[type=number] {
 
 @media only screen and (max-width: 850px) {
   .popular-big-box {
-    height: 98vh;
+    height: 100vh;
   }
 }
 
@@ -1667,9 +1669,15 @@ input[type=number] {
   }
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 600px) {
   .poular-product {
-    padding-top: 105px;
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 700px) {
+  .poular-product {
+    padding-top: 70px;
   }
 }
 
@@ -1694,12 +1702,18 @@ input[type=number] {
   color: #171717;
   text-align: center;
   font-size: 36px;
-  color: #383C5D;
+}
+
+@media (min-width: 1000px) and (min-height: 625px) {
+  .poular-product-h1 {
+    position: relative;
+    bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   .poular-product-h1 {
-    margin-bottom: 6%;
+    margin-bottom: 4%;
   }
 }
 
@@ -1713,7 +1727,7 @@ input[type=number] {
 @media only screen and (max-width: 680px) {
   .poular-product-h1 {
     font-size: 20px;
-    margin-bottom: 6%;
+    margin-bottom: 40px;
   }
 }
 
@@ -2128,8 +2142,8 @@ input[type=number] {
 
 .pupular-slider-line-active {
   height: 0%;
-  -webkit-animation: text-line 2s ease 4s  forwards;
-          animation: text-line 2s ease 4s  forwards;
+  -webkit-animation: text-line 1s ease 0s  forwards;
+          animation: text-line 1s ease 0s  forwards;
 }
 
 .popular--swiper-pagenation {
@@ -2148,8 +2162,9 @@ input[type=number] {
 .right-pagenation {
   text-align: right;
   margin: 0 24px;
-  position: relative;
-  bottom: 0px;
+  position: absolute;
+  bottom: 16px;
+  right: 0;
 }
 
 .about-as-outside-container {
@@ -2159,7 +2174,7 @@ input[type=number] {
 
 @media only screen and (max-width: 720px) {
   .about-as-outside-container {
-    height: 98vh;
+    height: 100vh;
   }
 }
 
@@ -2281,6 +2296,12 @@ input[type=number] {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .about-as-description-title {
+    top: 20px;
   }
 }
 
@@ -2497,7 +2518,7 @@ input[type=number] {
 
 @media only screen and (max-width: 850px) {
   .index-footer {
-    height: 98vh;
+    height: 100vh;
   }
 }
 
@@ -2788,9 +2809,10 @@ input[type=number] {
   bottom: -35px;
 }
 
-@media only screen and (max-width: 452px) {
+@media only screen and (max-width: 650px) {
   .smart-web-box {
     font-size: 11px;
+    bottom: 0px;
   }
 }
 
@@ -3282,7 +3304,7 @@ input[type=number] {
   }
 }
 
-.export__information__form .export__form input, .export__information__form .export__form select {
+.export__information__form .export__form input, .export__information__form .export__form select, .export__information__form .export__form .selected {
   width: 279px;
   height: 56px;
   padding-left: 16px;
@@ -3298,18 +3320,18 @@ input[type=number] {
   color: rgba(23, 23, 23, 0.7);
 }
 
-.export__information__form .export__form input:hover, .export__information__form .export__form select:hover {
+.export__information__form .export__form input:hover, .export__information__form .export__form select:hover, .export__information__form .export__form .selected:hover {
   border: 1px solid #171717;
 }
 
 @media only screen and (max-width: 1000px) {
-  .export__information__form .export__form input, .export__information__form .export__form select {
+  .export__information__form .export__form input, .export__information__form .export__form select, .export__information__form .export__form .selected {
     width: 250px;
   }
 }
 
 @media only screen and (max-width: 690px) {
-  .export__information__form .export__form input, .export__information__form .export__form select {
+  .export__information__form .export__form input, .export__information__form .export__form select, .export__information__form .export__form .selected {
     width: 100%;
     margin-right: 0px;
   }
@@ -3759,6 +3781,12 @@ input[type=number] {
 
 .ytp-icon-large-play-button-hover {
   background: no-repeat url(../assets/img/Group37.png) -10px -2554px;
+}
+
+.select2-results__option {
+  font: 12px/14px gothaProReg;
+  color: rgba(23, 23, 23, 0.7);
+  padding-left: 16px;
 }
 
 .aboutas {
@@ -4513,6 +4541,7 @@ input[type=number] {
 }
 
 .honey__description .honey__g span {
+  cursor: pointer;
   width: 67px;
   height: 45px;
   background: #fff;
@@ -4550,20 +4579,33 @@ input[type=number] {
   transition: 0.3s ease;
 }
 
-.honey__description .honey__g .honey__g__active {
+.honey__description .honey__g .tab-active {
   background: transparent linear-gradient(57deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
   color: #fff;
 }
 
-.honey__description .honey__text {
+.honey__description .product__text {
   font: 13px/23px gothaProReg;
   letter-spacing: 0;
   color: #171717;
   margin-bottom: 20px;
   position: relative;
+  width: 510px;
 }
 
-.honey__description .honey__text::after {
+@media only screen and (max-width: 600px) {
+  .honey__description .product__text {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .honey__description .product__text {
+    width: 100%;
+  }
+}
+
+.honey__description .product__text::after {
   content: '';
   width: 3px;
   height: 0%;
@@ -4575,12 +4617,12 @@ input[type=number] {
           animation: text-line 1s 1s ease forwards;
 }
 
-.honey__description .honey__text p {
+.honey__description .product__text p {
   margin-left: 16px;
 }
 
 @media only screen and (max-width: 550px) {
-  .honey__description .honey__text {
+  .honey__description .product__text {
     font: 12px/20px gothaProReg;
   }
 }
