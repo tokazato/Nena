@@ -193,6 +193,7 @@ $(document).ready(function() {
               nextEl: '.honey-img-next',
               prevEl: '.honey-img-prev',
           },
+          centerInsufficientSlides: true,
           breakpoints: {
               320: {
                 slidesPerView: 2.6,
@@ -221,6 +222,7 @@ $(document).ready(function() {
              nextEl: '.honey-video-next',
              prevEl: '.honey-video-prev',
          },
+         centerInsufficientSlides: true,
          breakpoints: {
              320: {
                slidesPerView: 2.6,
@@ -250,6 +252,7 @@ $(document).ready(function() {
             nextEl: '.honey-img-next',
             prevEl: '.honey-img-prev',
         },
+        centerInsufficientSlides: true,
         breakpoints: {
             320: {
               slidesPerView: 2.6,
@@ -278,6 +281,7 @@ if( $('.production-video-swiper-container').length != 0 ) {
          nextEl: '.honey-video-next',
          prevEl: '.honey-video-prev',
      },
+     centerInsufficientSlides: true,
      breakpoints: {
          320: {
            slidesPerView: 2.6,
@@ -305,6 +309,7 @@ if( $('.production-video-swiper-container').length != 0 ) {
         speed: 1000,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        centerInsufficientSlides: true,
         breakpoints: {
           320: {
             slidesPerView: 2.6,
@@ -348,6 +353,7 @@ if( $('.production-video-swiper-container').length != 0 ) {
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      centerInsufficientSlides: true,
       speed: 1000,
       breakpoints: {
         320: {

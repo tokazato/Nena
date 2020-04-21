@@ -11,7 +11,7 @@ var galleryThumbs = new Swiper('.main-swiper-bottom-box', {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      550: {
+      750: {
         slidesPerView: 4,
         spaceBetween: 40,
       },

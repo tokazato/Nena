@@ -1,36 +1,36 @@
 @font-face {
   font-family: gothaProMedium;
-  src: url(../fonts/GothamProMediumItalic.ttf);
+  src: url(../fonts/MyriadGEOMedium.ttf);
 }
 
 @font-face {
   font-family: gothaProBla;
-  src: url(../fonts/GothaProBla.otf);
+  src: url(../fonts/MyriadGEOMedium.ttf);
 }
 
 @font-face {
   font-family: gothaProBol;
-  src: url(../fonts/GothaProBol.otf);
+  src: url(../fonts/MyriadGEOBold.ttf);
 }
 
 @font-face {
   font-family: gothaProLig;
-  src: url(../fonts/GothaProLig.otf);
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
 }
 
 @font-face {
   font-family: gothaProLigIta;
-  src: url(../fonts/GothaProLigIta.otf);
+  src: url(../fonts/MyriadGEOMedium.ttf);
 }
 
 @font-face {
   font-family: gothaProMed;
-  src: url(../fonts/GothaProMed.otf);
+  src: url(../fonts/MyriadGEOMedium.ttf);
 }
 
 @font-face {
   font-family: gothaProReg;
-  src: url(../fonts/GothaProReg.otf);
+  src: url(../fonts/MyriadGEOMedium.ttf);
 }
 
 @-webkit-keyframes text-line {
@@ -568,9 +568,7 @@ input[type=number] {
 }
 
 .nav-link {
-  font-size: 12px;
-  font: Bold 12px/14px;
-  font-family: gothaProBol;
+  font: Bold 12px/14px gothaProLig;
   color: #2C3D4F;
   position: relative;
   cursor: pointer;
@@ -632,7 +630,7 @@ input[type=number] {
   }
 }
 
-.dropdown-title::after {
+.dropdown-title::before {
   content: '...';
   position: absolute;
   font-size: 20px;
@@ -643,7 +641,7 @@ input[type=number] {
 }
 
 @media only screen and (max-width: 800px) {
-  .dropdown-title::after {
+  .dropdown-title::before {
     color: rgba(255, 255, 255, 0.7);
   }
 }
@@ -653,7 +651,7 @@ input[type=number] {
 }
 
 @media only screen and (max-width: 800px) {
-  .dropdown-title:hover::after {
+  .dropdown-title:hover::before {
     color: white;
   }
 }
@@ -711,7 +709,7 @@ input[type=number] {
 
 .dropdown-li a {
   color: #171717;
-  font: 10px/12px gothaProBol;
+  font: bold 10px/12px gothaProLig;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -796,8 +794,9 @@ input[type=number] {
 .language-content-box a {
   padding: 13px;
   color: #2C3D4F;
-  font: 13px/15px gothaProBol;
+  font: bold 13px/15px gothaProLig;
   border-top: 1px solid #418B3D;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,7 +806,6 @@ input[type=number] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #fff;
 }
 
 @media only screen and (max-width: 800px) {
@@ -1585,7 +1583,6 @@ input[type=number] {
   height: auto;
   margin-right: 16px;
   background: transparent linear-gradient(16deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
-  border-radius: 50px;
 }
 
 .description-text-mobile-change {
@@ -2678,15 +2675,9 @@ input[type=number] {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 80%;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 720px) {
-  .footer-contact-box {
-    width: 100%;
-  }
 }
 
 .footer-contact-box a {
@@ -4139,13 +4130,12 @@ input[type=number] {
 .products__section {
   margin: 0 24px;
   min-height: calc(100vh - 401px);
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 @media only screen and (max-width: 550px) {
   .products__section {
     min-height: calc(100vh - 310px);
-    margin-bottom: 36px;
   }
 }
 
@@ -4800,7 +4790,7 @@ input[type=number] {
   border: 1px solid #418B3D;
   border-radius: 22px;
   text-align: center;
-  font: 11px/13px gothaProBla;
+  font: 11px/13px gothaProLig;
   letter-spacing: 0;
   color: #418B3D;
   text-transform: uppercase;
@@ -4814,7 +4804,7 @@ input[type=number] {
 @media only screen and (max-width: 550px) {
   .honey__buttons .honey__buy .honey__btn__buy {
     padding: 13px 24px;
-    font-size: 8px;
+    font: 8px/10px gothaProLig;
   }
 }
 
@@ -5939,7 +5929,7 @@ input[type=number] {
 }
 
 .footer .footer-addreess-type {
-  font: 12px/14px gothaProBol;
+  font: 12px/14px gothaProLig;
   letter-spacing: 0;
   color: #171717;
   margin-bottom: 10px;
@@ -6054,4 +6044,4 @@ input[type=number] {
   letter-spacing: 0;
   color: #171717;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-KA.css.map */

@@ -15,31 +15,31 @@
 }
 @font-face {
     font-family: gothaProMedium;
-    src: url(../fonts/GothamProMediumItalic.ttf);
+    src: url(../fonts/MyriadGEOMedium.ttf);
 }
 @font-face {
     font-family: gothaProBla;
-    src: url(../fonts/GothaProBla.otf);
+    src: url(../fonts/MyriadGEOMedium.ttf);
 }
 @font-face {
     font-family: gothaProBol;
-    src: url(../fonts/GothaProBol.otf);
+    src: url(../fonts/MyriadGEOBold.ttf);
 }
 @font-face {
     font-family: gothaProLig;
-    src: url(../fonts/GothaProLig.otf);
+    src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
 }
 @font-face {
     font-family: gothaProLigIta;
-    src: url(../fonts/GothaProLigIta.otf);
+    src: url(../fonts/MyriadGEOMedium.ttf);
 }
 @font-face {
     font-family: gothaProMed;
-    src: url(../fonts/GothaProMed.otf);
+    src: url(../fonts/MyriadGEOMedium.ttf);
 }
 @font-face {
     font-family: gothaProReg;
-    src: url(../fonts/GothaProReg.otf);
+    src: url(../fonts/MyriadGEOMedium.ttf);
 }
 @keyframes text-line {
     100% {
@@ -357,9 +357,7 @@ input[type=number] {
     }
 }
 .nav-link {
-    font-size: 12px;
-    font: Bold 12px/14px;
-    font-family: gothaProBol;
+    font: Bold 12px/14px gothaProLig;
     color: #2C3D4F;
     position: relative;
     cursor: pointer;
@@ -404,7 +402,7 @@ input[type=number] {
     @include max-width(800px) {
         margin: 0 0 36px 0;
     }
-    &::after {
+    &::before {
         content: '...';
         position: absolute;
         font-size: 20px;
@@ -420,7 +418,7 @@ input[type=number] {
         padding-bottom: 20px;
     }
     &:hover {
-        &::after {
+        &::before {
             @include max-width(800px) {
                 color: rgba(255, 255, 255, 1);
             }
@@ -462,7 +460,7 @@ input[type=number] {
     }
     a {
         color: #171717;
-        font:  10px/12px gothaProBol;
+        font: bold 10px/12px gothaProLig;
         transition: 0.5s ease;
         .nav-link::after {
             height: 60px; 
@@ -520,12 +518,12 @@ input[type=number] {
     a {
         padding: 13px;
         color: #2C3D4F;
-        font:  13px/15px gothaProBol;
+        font: bold 13px/15px gothaProLig;
         border-top: 1px solid #418B3D;
+        background-color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
         @include max-width(800px) {
             padding: 7px;
             font-size: 10px;
@@ -961,7 +959,6 @@ input[type=number] {
 .thumb-img {
     height: 100%;
     cursor: pointer;
-    // opacity: 0.4;
     transition: 0.3s ease;
     &:hover {
         transition: 0.3s ease;
@@ -1082,7 +1079,6 @@ input[type=number] {
     height: auto;
     margin-right: 16px;
     background: transparent linear-gradient(16deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
-    border-radius: 50px;
 }
 .description-text-mobile-change {
     display: flex;
@@ -1784,11 +1780,8 @@ input[type=number] {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
-    @include max-width(720px) {
-        width: 100%;
-    }
     a {
         width: 215px;
         @include max-width(452px) {
@@ -2805,10 +2798,9 @@ input[type=number] {
 .products__section {
     margin: 0 24px;
     min-height: calc(100vh - 401px);
-    margin-bottom: 56px;
+    margin-bottom: 36px;
     @include max-width(550px) {
         min-height: calc(100vh - 310px);
-        margin-bottom: 36px;
     }
 }
 .products {
@@ -3236,7 +3228,7 @@ input[type=number] {
                 border: 1px solid #418B3D;
                 border-radius: 22px;
                 text-align: center;
-                font: 11px/13px gothaProBla;
+                font: 11px/13px gothaProLig;
                 letter-spacing: 0;
                 color: #418B3D;
                 text-transform: uppercase;
@@ -3245,8 +3237,7 @@ input[type=number] {
                 animation: shake 1s ease 1s forwards;
                 @include max-width(550px) {
                     padding: 13px 24px;
-                    font-size: 8px;
-                    // margin-top: 30px;
+                    font: 8px/10px gothaProLig;
                 }
                 &:hover {
                     background: transparent linear-gradient(60deg, #003114 0%, #438E3E 100%) 0% 0% no-repeat padding-box;
@@ -4026,7 +4017,7 @@ input[type=number] {
         width: 247px;
     }
     .footer-addreess-type {
-        font: 12px/14px gothaProBol;
+        font: 12px/14px gothaProLig;
         letter-spacing: 0;
         color: #171717;
         margin-bottom: 10px;
@@ -4106,4 +4097,5 @@ input[type=number] {
         }
     }
 }
-// footer end
+// footer end 
+
