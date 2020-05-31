@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#db5945">
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -96,21 +97,30 @@
 <!-- end Page Line  -->
 
 <!-- pages map start -->
-    <div class="pages__map">
-        <div class="pages__map__green__line"></div>
-        <div class="container">
-            <div class="pages__map__container">
-                <div class="pages__map__container__pages">
-                    <a href="index.html" class="pages__map__container__pages__home">Home / </a>
-                    <a href="#!" class="pages__map__container__pages__home">About / </a>
-                    <a href="#!" class="pages__map__container__pages__current__page"> About Company</a>
-                </div>
-                <a href="#!" class="pages__map__container__share">
-                    <img src="assets/img/ic_share_24px.svg" alt=""> <span>Share</span>
-                </a>
-            </div>
+<div class="pages__map">
+    <div class="pages__map__container">
+        <div class="pages__map__container__pages">
+            <a href="index.html" class="pages__map__container__pages__home">Home / </a>
+            <a href="#!" class="pages__map__container__pages__home">About / </a>
+            <a href="#!" class="pages__map__container__pages__current__page"> About Company</a>
+            <img class="arrow-green" src="assets/img/arrow-new-green.png" alt="">
+        </div>
+        <div class="pages__map__container__share">
+            <a href="#!">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#!" class="">
+                <img src="assets/img/ic_share_24px.svg" alt=""> <span class="share-text">Share</span>
+            </a>
         </div>
     </div>
+</div>
 <!-- pages map end -->
 
     <div class="honey__box">
@@ -122,11 +132,11 @@
                 <div class="honey__description">
                     <h1>Alpine honey</h1>
                     <div class="honey__g">
-                        <span class="tab-active productDescript" data-product-descript="text-1">520g</span>
-                        <span class="productDescript" data-product-descript="text-2">350g</span>
+                        <span class="productDescriptGrams" data-product-descript="<p>text-1</p>">520g</span>
+                        <span class="productDescriptGrams" data-product-descript="<p>text-2</p>">350g</span>
                     </div>
                     <div class="product__text">
-                        <p>
+                        <!-- <p>
                             <b> Nutritional information per 100 g: </b>
                             Energy value 1387 kJ / 326 kcal, fat 0 g
                             <b>Storage conditions: </b>  
@@ -138,22 +148,22 @@
                             manufacture and expiration date: 
                             As shown on the package. (24 month)
                             <b>Barcode:</b> 4860108700662
-                        </p>
+                        </p> -->
                     </div>
                 </div>
                 <div class="honey__buttons">
                     <div class="honey__tabs">
-                        <div  class="honey__tab productDescript" data-product-descript="text-3">
+                        <div  class="honey__tab productDescriptTab">
                             <button 
                                 type="button" 
-                                class="tab__btn" >
+                                class="tab__btn aboutProductBtn" >
                                 About Product
                             </button>
                             <div class="big-circle">
                                 <div class="small-circle"></div>
                             </div>
                         </div>
-                        <div class="honey__tab productDescript" data-product-descript="text-4">
+                        <div class="honey__tab productDescriptTab hideGrameTab" data-product-descript="text-4">
                             <button 
                                 type="button" 
                                 class="tab__btn">
@@ -163,7 +173,7 @@
                                 <div class="small-circle"></div>
                             </div>
                         </div>
-                        <div class="honey__tab productDescript" data-product-descript="text-5">
+                        <div class="honey__tab productDescriptTab hideGrameTab" data-product-descript="text-5">
                             <button 
                                 type="button" 
                                 class="tab__btn">
@@ -327,13 +337,13 @@
         <div class="swiper-container gallery-top popup-swiper-video-gallery-top">
             <div class="swiper-wrapper popup-swiper-wrapper popup-top-swiper-wrapper">
                 <div class="swiper-slide popup-top-swiper-slide">
-                    <iframe  src="https://www.youtube.com/embed/pBfbC27JaFY"></iframe>
+                    <iframe  src="https://www.youtube.com/embed/pBfbC27JaFY" allowfullscreen="allowfullscreen"></iframe>
                 </div>
                 <div class="swiper-slide popup-top-swiper-slide">
-                    <iframe  src="https://www.youtube.com/embed/Z0gPN30kvDA"></iframe>
+                    <iframe  src="https://www.youtube.com/embed/Z0gPN30kvDA" allowfullscreen="allowfullscreen"></iframe>
                 </div>
                 <div class="swiper-slide popup-top-swiper-slide">
-                    <iframe  src="https://www.youtube.com/embed/pBfbC27JaFY"></iframe>
+                    <iframe  src="https://www.youtube.com/embed/pBfbC27JaFY" allowfullscreen="allowfullscreen"></iframe>
                 </div>
             </div>
             <!-- Add Arrows -->
@@ -387,12 +397,15 @@
                             <a class="footer-get-contact" href="mailto:info@nena.ge" >info@nena.ge</a>
                         </div>
                         <div class="social__logo">
-                            <div class="fb__box">
+                            <a href="#!" class="fb__box">
                                 <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <div class="insta__box">
+                            </a>
+                            <a href="#!" class="youtube__box">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#!" class="insta__box">
                                 <i class="fab fa-instagram"></i>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

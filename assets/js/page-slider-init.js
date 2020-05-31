@@ -1,15 +1,31 @@
 var swiper = new Swiper('.page-slider-swiper-container', {
     direction: 'vertical',
-    mousewheel: true,
+    // mousewheel: true,
+    mousewheel: {
+        releaseOnEdges: true
+    },
     speed: 1000,
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination', 
         clickable: true,
       },
     keyboard: {
         enabled: true,
         onlyInViewport: false,
-    }
+    },
+    freeModeSticky: true,
+    freeModeMomentum: true,	
+    // loop: false,
+    // slidesPerView:'auto',
+    // spaceBetween: 0,
+    // freeMode: true,
+    // speed: 1000,
+    // mousewheel: {
+    //     releaseOnEdges: true
+    // },
+    // keyboard: {
+    //   enabled: true,
+    // },
 });
 
 var mySwiper = document.querySelector('.page-slider-swiper-container').swiper
@@ -44,6 +60,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
       }
       
     if( $('#page1').hasClass('swiper-slide-active') ) {
+        mySwiper2.autoplay.stop();
         $('body').css('background', '#fff')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-1').addClass('active-page')
@@ -77,6 +94,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         })
     }
     if( $('#page2').hasClass('swiper-slide-active') ) {
+        mySwiper2.autoplay.start();
         $('body').css('background', '#fffeef')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-2').addClass('active-page')
@@ -111,6 +129,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         })
     }
     if( $('#page3').hasClass('swiper-slide-active') ) {
+        mySwiper2.autoplay.stop();
         $('body').css('background', '#FCF5F7')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-3').addClass('active-page')
@@ -148,6 +167,7 @@ mySwiper.on('slideChangeTransitionStart', function () {
         })
     }
     if( $('#page4').hasClass('swiper-slide-active') ) {
+        mySwiper2.autoplay.stop();
         $('body').css('background', '#EFF6FF')
         $('.pagenation-box a').removeClass('active-page')
         $('.page-4').addClass('active-page')

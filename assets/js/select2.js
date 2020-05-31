@@ -904,6 +904,8 @@ S2.define('select2/results',[
       var $options = self.$results
         .find('.select2-results__option[aria-selected]');
 
+        
+
       $options.each(function () {
         var $option = $(this);
 
@@ -1234,6 +1236,12 @@ S2.define('select2/results',[
     this.$results.on('mouseenter', '.select2-results__option[aria-selected]',
       function (evt) {
       var data = $(this).data('data');
+
+      if(data.id == 0) {
+        $('.select2-selection').addClass('contact__from__error')
+      } else {
+        $('.select2-selection').removeClass('contact__from__error')
+      }
 
       self.getHighlightedResults()
           .removeClass('select2-results__option--highlighted');

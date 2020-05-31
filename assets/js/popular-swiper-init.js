@@ -8,16 +8,17 @@ var galleryThumbs = new Swiper('.popular-swiper-thumbs', {
   var galleryTop = new Swiper('.popular-swiper-top', {
     spaceBetween: 150,
     autoplay: {
-      delay: 4000,
+      disableOnInteraction: false,
+      delay: 7000,
     },
     thumbs: {
       swiper: galleryThumbs
     },
-    // speed: 100,
   });
 
-
   var mySwiper2 = document.querySelector('.popular-swiper-top').swiper
+
+  mySwiper2.autoplay.stop();
 
 
   mySwiper2.on('slideChange', function () {
@@ -40,4 +41,18 @@ var galleryThumbs = new Swiper('.popular-swiper-thumbs', {
     }, 500);
 
 
+  });
+
+  mySwiper2.on('slideChangeTransitionStart', function () {
+
+    if( $('.popular-big-box .swiper-slide-thumb-active img').hasClass('bottle-1000') ) {
+        $('.popular-swiper-big-img-box img').css('height', '100%')
+    }
+    if( $('.popular-big-box .swiper-slide-thumb-active img').hasClass('bottle-500') ) {
+        $('.popular-swiper-big-img-box img').css('height', '75%')
+    }
+    if( $('.popular-big-box .swiper-slide-thumb-active img').hasClass('bottle-300') ) {
+        $('.popular-swiper-big-img-box img').css('height', '60%')
+    }
+    
   });
